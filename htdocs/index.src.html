@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, nocache">
+    <title>Take a (Client) Hint!</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/takeahint.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- [0.0] - Intro -->
+        <section>
+          <!-- [0.1] - Title Card -->
+          <section data-state="centered">
+            <h1 class="uppercase">Take a</h1>
+            <h3>(client)</h3>
+            <h1 class="uppercase">Hint</h1>
+            <h6>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">twitter.com/malchata</a> &mdash; <a href="https://jeremy.codes" rel="noopener">jeremy.codes</a></h6>
+          </section>
+          <!-- [0.2] - Hello! -->
+          <section data-state="centered">
+            <div class="flex-container">
+              <div>
+                <h1>Hi!</h1>
+                <h4>I'm Jeremy!</h4>
+              </div>
+              <picture>
+                <source srcset="img/me-1x.webp 1x, img/me-2x.webp 2x" type="image/webp">
+                <img src="img/me-1x.png" srcset="img/me-1x.png 1x, img/me-2x.png 2x" alt="A cartoon line art drawing of Jeremy Wagner.">
+              </picture>
+            </div>
+          </section>
+        </section>
+        <!-- [1.0] - Adaptive Performance -->
+        <section>
+          <!-- [1.1] - What are Client Hints? -->
+          <section data-state="centered">
+            <h3>What are</h3>
+            <h1 class="uppercase">client hints?</h1>
+          </section>
+          <!-- [1.2] - The Clueless Browser -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/clueless-browser-1x.webp 1x, img/clueless-browser-2x.webp 2x" type="image/webp">
+              <img src="img/clueless-browser-1x.png" srcset="img/clueless-browser-1x.png 1x, img/clueless-browser-2x.png 2x" alt="A cartoon drawing of a browser with a question mark hovering over it.">
+            </picture>
+          </section>
+          <!-- [1.3] - The Clueless Server -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/clueless-server-1x.webp 1x, img/clueless-server-2x.webp 2x" type="image/webp">
+              <img src="img/clueless-server-1x.png" srcset="img/clueless-server-1x.png 1x, img/clueless-server-2x.png 2x" alt="A cartoon drawing of a web server with a question mark hovering over it.">
+            </picture>
+          </section>
+          <!-- [1.4] - The Clueless Device -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/clueless-device-1x.webp 1x, img/clueless-device-2x.webp 2x" type="image/webp">
+              <img src="img/clueless-device-1x.png" srcset="img/clueless-device-1x.png 1x, img/clueless-device-2x.png 2x" alt="A cartoon drawing of a mobile phone with a question mark hovering over the face displayed on the screen.">
+            </picture>
+          </section>
+          <!-- [1.5] - Content Negotiation -->
+          <section data-state="centered">
+            <h1 class="uppercase">
+              Content<br />
+              negotiation
+            </h1>
+          </section>
+          <!-- [1.6] - The HTTP Accept Header -->
+          <section data-state="centered">
+            <h2>The HTTP</h2>
+            <h1><code>Accept</code></h1>
+            <h2>header</h2>
+          </section>
+          <!-- [1.7] - A Typical <picture> Example -->
+          <section data-state="centered">
+            <pre><code class="html">&lt;!-- Load a WebP if we can (but fall back if we can't) --&gt;
+&lt;picture&gt;
+  &lt;source srcset=&quot;whats-up.webp&quot; type=&quot;image/webp&quot;&gt;
+  &lt;img src=&quot;whats-up.jpg&quot; alt=&quot;I'm an image!&quot;&gt;
+&lt;/picture&gt;
+</pre></code>
+          </section>
+          <!-- [1.8] - Accept Header Example -->
+          <section data-state="centered">
+            <h4>
+              <code>Accept: image/webp,image/*</code>
+            </h4>
+            <h5 class="fragment">
+              <br>
+              (Contextual. Also truncated for brevity.)
+            </h5>
+          </section>
+          <!-- [1.9] - Detecting in PHP -->
+          <section data-state="centered">
+            <pre><code class="php">&lt;?php
+// Detect WebP support
+$webp = false;
+
+if (stristr($_SERVER[&quot;HTTP_ACCEPT&quot;], &quot;image/webp&quot;) !== false) {
+  $webp = true;
+}
+?&gt;</code></pre>
+          </section>
+          <!-- [1.10] - Rewriting image markup -->
+          <section data-state="centered">
+            <pre><code class="html">&lt;?php
+// Send image markup
+if ($webp === true) {
+  // Give me a WebP!
+  ?&gt;&lt;img src=&quot;whats-up.webp&quot; alt=&quot;I'm an image!&quot;&gt;&lt;?php
+} else {
+  // Give me a JPEG!
+  ?&gt;&lt;img src=&quot;whats-up.jpg&quot; alt=&quot;I'm an image!&quot;&gt;&lt;?php
+}
+?&gt;</code></pre>
+          </section>
+          <!-- [1.11] - Less Markup -->
+          <section data-state="centered">
+            <h1 class="accent">~60%</h1>
+            <h3>less markup!</h3>
+          </section>
+        </section>
+        <!-- [2.0] - TBD -->
+        <section>
+          <section data-state="section-starter">
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        controls: false,
+        progress: false,
+        transition: "none",
+        viewDistance: 2,
+        help: false,
+        dependencies: [{
+            src: "plugin/notes/notes.js",
+            async: true
+          },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]});
+    </script>
+  </body>
+</html>

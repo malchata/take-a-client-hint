@@ -1,0 +1,17 @@
+@font-face{
+  font-family: "Cabin Sketch";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/cabin-sketch-regular.woff2") format("woff2"),
+       url("../../fonts/cabin-sketch-regular.woff") format("woff");
+  font-display: fallback;
+}
+
+@font-face{
+  font-family: "Cabin Sketch";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/cabin-sketch-bold.woff2") format("woff2"),
+       url("../../fonts/cabin-sketch-bold.woff") format("woff");
+  font-display: fallback;
+}

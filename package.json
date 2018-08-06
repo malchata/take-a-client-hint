@@ -1,0 +1,48 @@
+{
+  "name": "take-a-client-hint",
+  "version": "1.0.0",
+  "description": "A talk about client hints!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch": "npx gulp",
+    "build": "npx gulp build",
+    "start": "npx gulp build && node http.js",
+    "postinstall": "npx gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malchata/take-a-client-hint.git"
+  },
+  "keywords": [
+    "client",
+    "hints",
+    "webperf",
+    "performance"
+  ],
+  "author": "Jeremy L. Wagner <jeremy.l.wagner@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malchata/take-a-client-hint/issues"
+  },
+  "homepage": "https://github.com/malchata/take-a-client-hint#readme",
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "dependencies": {
+    "autoprefixer": "^9.1.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "cssnano": "^4.0.5",
+    "express": "^4.16.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8"
+  }
+}

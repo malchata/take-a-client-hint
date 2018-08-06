@@ -1,0 +1,263 @@
+/**
+ * Take a (Client) Hint! presentation theme styles.
+ * By Jeremy L. Wagner, https://www.jeremywagner.me
+ **/
+// Default mixins and settings
+@import "../template/mixins";
+@import "../template/settings";
+
+// Font imports
+@import "fonts.scss";
+
+// Theme-specific variables
+$ghostWhite: #fafaff;
+$lapisLazuli: #275dad;
+$vividAuburn: #8c271e;
+$licorice: #12100e;
+$onyx: #3d2b3d;
+
+// Theme overrides
+$mainColor: $ghostWhite;
+$headingColor: $ghostWhite;
+$mainFontSize: 42px;
+$mainFont: "Cabin Sketch", serif;
+$headingFont: "Cabin Sketch", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+
+// Heading Sizes
+$heading1Size: 3em;
+$heading2Size: 2.2918258212em;
+$heading3Size: 1.750821865em;
+$heading4Size: 1.3375262528em;
+$heading5Size: 1.0217924009em;
+$heading6Size: 0.7805900695em;
+
+// Theme template
+@import "../template/theme";
+
+.reveal {
+  code,
+  pre {
+    font-family: "Inconsolata", "Consolas", monospace;
+  }
+
+  pre {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .slides {
+    section {
+      .fragment {
+        transition: none;
+      }
+    }
+  }
+
+  .accent {
+    color: $vividAuburn;
+  }
+
+  section {
+    a {
+      color: $vividAuburn;
+
+      &:hover {
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: $lapisLazuli;
+    }
+
+    h1 {
+      font-size: $heading1Size;
+    }
+
+    h2 {
+      font-size: $heading2Size;
+    }
+
+    h3 {
+      font-size: $heading3Size;
+    }
+
+    h4 {
+      font-size: $heading4Size;
+    }
+
+    h5 {
+      font-size: $heading5Size;
+    }
+
+    h6 {
+      font-size: $heading6Size;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.309;
+      text-align: left;
+      font-weight: 700;
+      margin: 0;
+
+      code {
+        text-transform: none;
+      }
+    }
+
+    blockquote {
+      background: none;
+      // color: $ghostWhite;
+      text-align: left;
+      width: 100%;
+      box-shadow: none;
+      line-height: 1.309;
+      font-size: 0.875em;
+      padding: 0 0 0 1em;
+      text-transform: none;
+      //border-left: .125em solid transparentize($terraCotta, .25);
+
+      code {
+        font-style: normal;
+        font-size: 0.9em;
+      }
+
+      cite {
+        text-align: right;
+        display: block;
+        font-size: 0.8333333333em;
+        margin: 0.3333333333em 0 0;
+      }
+    }
+
+    h3 + pre {
+      margin: 0.5em 0 1.5em;
+    }
+
+    ul {
+      align-self: center;
+
+      li {
+        // color: $ghostWhite;
+        margin-bottom: 0.5em;
+
+        &:first-child {
+          margin-top: 0.5em;
+        }
+      }
+    }
+
+    img,
+    video {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+
+      & > * {
+        width: 48.75%;
+        height: auto;
+      }
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+  }
+
+  picture {
+    & > .stretch {
+      width: 100%;
+    }
+  }
+
+  blockquote {
+    background: none;
+    //color: $ghostWhite;
+    text-align: left;
+    width: 100%;
+    box-shadow: none;
+    line-height: 1.618;
+    padding: 0 0 0 1em;
+    //border-left: .125em solid transparentize($terraCotta, .25);
+
+    code {
+      font-style: normal;
+      font-size: 0.9em;
+    }
+
+    cite {
+      text-align: right;
+      display: block;
+      font-size: 0.8333333333em;
+      margin: 0.3333333333em 0 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5em 0 0;
+  }
+
+  th {
+    code {
+      font-weight: 400;
+    }
+  }
+
+  hr {
+    border-style: none;
+    //border-top: 1px solid $ghostWhite;
+    margin: 0.25em 0;
+    opacity: 0.5;
+  }
+}
+
+body {
+  background: $ghostWhite;
+}
+
+.centered body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  p {
+    text-align: center;
+  }
+
+  .reveal {
+    .slides {
+      section {
+        text-align: center;
+      }
+    }
+  }
+}
