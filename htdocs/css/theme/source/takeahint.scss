@@ -37,6 +37,16 @@ $heading6Size: 0.7805900695em;
 // Theme template
 @import "../template/theme";
 
+::selection {
+  color: $ghostWhite;
+  background-color: $vividAuburn;
+}
+
+::-moz-selection {
+  color: $ghostWhite;
+  background-color: $vividAuburn;
+}
+
 .reveal {
   code,
   pre {
@@ -58,6 +68,18 @@ $heading6Size: 0.7805900695em;
 
   .accent {
     color: $vividAuburn;
+  }
+
+  .medium {
+    max-width: 50%;
+  }
+
+  .large {
+    max-width: percentage(2 / 3);
+  }
+
+  .larger {
+    max-width: percentage(5 / 6);
   }
 
   section {
@@ -165,6 +187,8 @@ $heading6Size: 0.7805900695em;
       border: 0;
       background: transparent;
       box-shadow: none;
+      height: auto;
+      margin: 0;
     }
 
     .flex-container {
@@ -257,6 +281,30 @@ body {
     .slides {
       section {
         text-align: center;
+      }
+    }
+  }
+}
+
+.section-starter body {
+  .reveal {
+    .slides {
+      section {
+        .sections {
+          h4 {
+            text-transform: uppercase;
+            opacity: (1 / 3);
+
+            &.current {
+              opacity: 1;
+              color: $vividAuburn;
+            }
+          }
+        }
+
+        .section-image {
+          width: 100%;
+        }
       }
     }
   }

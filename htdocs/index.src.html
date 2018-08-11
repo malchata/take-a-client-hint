@@ -125,9 +125,125 @@ if ($webp === true) {
             <h3>less markup!</h3>
           </section>
         </section>
-        <!-- [2.0] - TBD -->
+        <!-- [2.0] - Opting In -->
         <section>
+          <!-- [2.1] - Opting In -->
           <section data-state="section-starter">
+            <div class="flex-container">
+              <div class="sections">
+                <h4 class="current">- Opting in</h4>
+                <h4>- Image hints</h4>
+                <h4>- Network hints</h4>
+                <h4>- The ensemble</h4>
+                <h4>- Gotchas</h4>
+                <h4>- Wrapping up</h4>
+              </div>
+              <picture>
+                <source srcset="img/opt-in-out-1x.webp 1x, img/opt-in-out-2x.webp 2x" type="image/webp">
+                <img class="section-image" src="img/opt-in-out-1x.png" srcset="img/opt-in-out-1x.png 1x, img/opt-in-out-2x.png 2x" alt="A cartoon drawing of two checkboxes with a pencil near them. One says 'opt out', while the other says 'opt in'. The 'opt in' box is checked." width="640" height="398">
+              </picture>
+            </div>
+          </section>
+          <!-- [2.2] - Client Hints are Opt-in -->
+          <section data-state="centered">
+            <h3>Client hints are</h3>
+            <h1 class="uppercase accent">Opt-in only!</h1>
+          </section>
+          <!-- [2.3] - Opt in with `Accept-CH` -->
+          <section data-state="centered">
+            <h3>Opt in with</h3>
+            <h3><code>Accept-CH</code></h3>
+          </section>
+          <!-- [2.4] - Ways to opt in -->
+          <section>
+            <h3>Example use:</h3>
+            <pre><code class="http">Accept-CH: Viewport-Width, DPR</code></pre>
+            <div class="fragment">
+              <h3>Via HTML:</h3>
+              <pre><code class="html">&lt;meta http-equiv=&quot;Accept-CH&quot; content=&quot;Viewport-Width, DPR&quot;&gt;</pre></code>
+            </div>
+            <div class="fragment">
+              <h3>Via PHP:</h3>
+              <pre><code class="php">&lt;?php header(&quot;Accept-CH: Viewport-Width, DPR&quot;); ?&gt;</code></pre>
+            </div>
+          </section>
+          <!-- [2.5] - Ways to opt in -->
+          <section data-state="centered">
+            <h3>Persist hints using</h3>
+            <h3><code>Accept-CH-Lifetime</code></h3>
+          </section>
+          <!-- [2.6] - Ways to opt in -->
+          <section>
+            <h3>Example use:</h3>
+            <pre><code class="http">Accept-CH-Lifetime: 86400</code></pre>
+            <div class="fragment">
+              <h3>Via HTML:</h3>
+              <pre><code class="html">&lt;meta http-equiv=&quot;Accept-CH-Lifetime&quot; content=&quot;86400&quot;&gt;</pre></code>
+            </div>
+            <div class="fragment">
+              <h3>Via PHP:</h3>
+              <pre><code class="php">&lt;?php header(&quot;Accept-CH-Lifetime: 86400&quot;); ?&gt;</code></pre>
+            </div>
+          </section>
+        </section>
+        <!-- [3.0] - Image Hints -->
+        <section>
+          <!-- [3.1] - Image Hints -->
+          <section data-state="section-starter">
+            <div class="flex-container">
+              <div class="sections">
+                <h4>- Opting in</h4>
+                <h4 class="current">- Image hints</h4>
+                <h4>- Network hints</h4>
+                <h4>- The ensemble</h4>
+                <h4>- Gotchas</h4>
+                <h4>- Wrapping up</h4>
+              </div>
+              <picture>
+                <source srcset="img/image-icon-1x.webp 1x, img/image-icon-2x.webp 2x" type="image/webp">
+                <img class="section-image large" src="img/image-icon-1x.png" srcset="img/image-icon-1x.png 1x, img/image-icon-2x.png 2x" alt="A cartoon drawing of an Netscape-style image icon." width="446" height="512">
+              </picture>
+            </div>
+          </section>
+          <!-- [3.2] - DPR -->
+          <section data-state="centered">
+            <h1>
+              <code>DPR</code>
+            </h1>
+            <h5 class="fragment">The client's current device pixel ratio.</h5>
+          </section>
+          <!-- [3.3] - srcset Code -->
+          <section data-state="centered">
+            <pre><code class="html">&lt;img src=&quot;whats-up-1x.png&quot;
+     srcset=&quot;whats-up-1x.png 1x, whats-up-2x.png 2x&quot;
+     alt=&quot;I'm an image!&quot;&gt;</pre></code>
+          </section>
+        </section>
+        <!-- [4.0] - Network Hints -->
+        <section>
+          <!-- [4.1] - Network Hints -->
+          <section data-state="section-starter">
+            <div class="flex-container">
+              <div class="sections">
+                <h4>- Opting in</h4>
+                <h4>- Image hints</h4>
+                <h4 class="current">- Network hints</h4>
+                <h4>- The ensemble</h4>
+                <h4>- Gotchas</h4>
+                <h4>- Wrapping up</h4>
+              </div>
+              <picture>
+                <source srcset="img/network-cable-1x.webp 1x, img/network-cable-2x.webp 2x" type="image/webp">
+                <img class="section-image larger" src="img/network-cable-1x.png" srcset="img/network-cable-1x.png 1x, img/network-cable-2x.png 2x" alt="A cartoon drawing of a network cable." width="512" height="555">
+              </picture>
+            </div>
+          </section>
+          <!-- [4.2] - Adaptive Performance -->
+          <section data-state="centered">
+            <h2 class="uppercase">
+              Adaptive<br>
+              performance
+            </h2>
           </section>
         </section>
       </div>
@@ -143,17 +259,17 @@ if ($webp === true) {
         viewDistance: 2,
         help: false,
         dependencies: [{
-            src: "plugin/notes/notes.js",
-            async: true
-          },
-          {
-            src: "plugin/highlight/highlight.js",
-            async: true,
-            callback: function() {
-              hljs.initHighlightingOnLoad();
-            }
+          src: "plugin/notes/notes.js",
+          async: true
+        },
+        {
+          src: "plugin/highlight/highlight.js",
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
           }
-        ]});
+        }]
+      });
     </script>
   </body>
 </html>
