@@ -5,37 +5,16 @@
 // Default mixins and settings
 @import "../template/mixins";
 @import "../template/settings";
+@import "../template/theme";
 
 // Font imports
 @import "fonts.scss";
 
-// Theme-specific variables
-$ghostWhite: #fafaff;
-$lapisLazuli: #275dad;
-$vividAuburn: #8c271e;
-$licorice: #12100e;
-$onyx: #3d2b3d;
-
 // Theme overrides
-$mainColor: $ghostWhite;
 $headingColor: $ghostWhite;
-$mainFontSize: 42px;
-$mainFont: "Cabin Sketch", serif;
-$headingFont: "Cabin Sketch", sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
-
-// Heading Sizes
-$heading1Size: 3em;
-$heading2Size: 2.2918258212em;
-$heading3Size: 1.750821865em;
-$heading4Size: 1.3375262528em;
-$heading5Size: 1.0217924009em;
-$heading6Size: 0.7805900695em;
-
-// Theme template
-@import "../template/theme";
 
 ::selection {
   color: $ghostWhite;
@@ -56,6 +35,9 @@ $heading6Size: 0.7805900695em;
   pre {
     width: 100%;
     box-shadow: none;
+    font-size: 1.5278838808em;
+    text-align: left;
+    line-height: 1.309;
   }
 
   .slides {
@@ -66,12 +48,28 @@ $heading6Size: 0.7805900695em;
     }
   }
 
+  .sparkle {
+    display: inline-block;
+    vertical-align: middle;
+
+    & + code {
+      margin-left: .1em;
+      margin-right: .1em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  code + .sparkle {
+    transform: scaleX(-1);
+  }
+
   .accent {
     color: $vividAuburn;
   }
 
   .medium {
-    max-width: 50%;
+    max-width: percentage(1 / 2);
   }
 
   .large {
@@ -98,6 +96,7 @@ $heading6Size: 0.7805900695em;
     h6,
     p {
       color: $lapisLazuli;
+      font-family: $headingFont;
     }
 
     h1 {
@@ -130,7 +129,7 @@ $heading6Size: 0.7805900695em;
     h4,
     h5,
     h6 {
-      line-height: 1.309;
+      line-height: 1.618;
       text-align: left;
       font-weight: 700;
       margin: 0;
@@ -169,16 +168,17 @@ $heading6Size: 0.7805900695em;
       margin: 0.5em 0 1.5em;
     }
 
-    ul {
-      align-self: center;
+    li {
+      margin-bottom: 0.5em;
+      color: $lapisLazuli;
+      font-family: $mainFont;
+      list-style: none;
+      text-align: left;
+      font-size: $heading5Size;
+      line-height: 1.309;
 
-      li {
-        // color: $ghostWhite;
-        margin-bottom: 0.5em;
-
-        &:first-child {
-          margin-top: 0.5em;
-        }
+      &:first-child {
+        margin-top: 0.5em;
       }
     }
 
@@ -201,6 +201,10 @@ $heading6Size: 0.7805900695em;
         width: 48.75%;
         height: auto;
       }
+    }
+
+    .shadow {
+      box-shadow: 0 0 2em #000;
     }
 
     .uppercase {
@@ -247,9 +251,17 @@ $heading6Size: 0.7805900695em;
     margin: 0.5em 0 0;
   }
 
-  th {
+  th,
+  td {
+    color: $lapisLazuli;
+
     code {
       font-weight: 400;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      text-align: right;
     }
   }
 
