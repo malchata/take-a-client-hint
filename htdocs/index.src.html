@@ -117,6 +117,26 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section data-state="centered">
             <h3>(But also performance)</h3>
           </section>
+          <!-- [1.13] - MIT Article -->
+          <section data-background="img/digital-divide.png" data-background-position="center left"></section>
+          <!-- [1.14] - MIT Article Quote -->
+          <section data-background="img/digital-divide.png" data-background-color="#000000" data-background-position="center left" data-background-opacity=".25">
+            <picture>
+              <source srcset="img/article-quote-2x.webp 2x, img/article-quote-1x.webp 1x" type="image/webp">
+              <img src="img/article-quote-1x.png" srcset="img/article-quote-2x.png 2x, img/article-quote-1x.png 1x" alt="A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online." class="shadow stretch">
+            </picture>
+          </section>
+          <!-- [1.15] - Adaptive Performance -->
+          <section data-state="centered">
+            <h2 class="uppercase">
+              Adaptive<br>
+              performance
+            </h2>
+          </section>
+          <!-- [1.16] - Wisconsin! -->
+          <section data-state="centered">
+            <img src="img/sconnie.svg" alt="An outline of the state of Wisconsin." class="stretch">
+          </section>
         </section>
         <!-- [2.0] - Opting In -->
         <section>
@@ -193,18 +213,6 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               <h3>Via PHP:</h3>
               <pre><code class="php">&lt;?php header(&quot;Accept-CH-Lifetime: 86400&quot;); ?&gt;</code></pre>
             </div>
-          </section>
-          <!-- [2.9] - Why Do We Need Persistence? -->
-          <section data-state="centered">
-            <h3 class="accent">Why do we need persistence?</h3>
-            <h4 class="fragment">Because some hints are contextual!</h4>
-            <h5 class="fragment">(Kind of like with <code>Accept</code>.)</h5>
-          </section>
-        </section>
-        <!-- [3.0] - The Use Case -->
-        <section>
-          <section data-state="centered">
-
           </section>
         </section>
         <!-- [4.0] - Image Hints -->
@@ -288,9 +296,9 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <!-- [4.9] - Viewport-Width -->
           <section data-state="centered">
             <h3>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
               <code>Viewport-Width</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
             </h3>
           </section>
           <!-- [4.10] - Viewport Width Illustration -->
@@ -322,16 +330,41 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [4.13] - Omitting JS with Viewport-Width -->
           <section>
             <pre><code class="html">&lt;body&gt;
-  &lt;!-- ... --&gt;
+  &lt;!-- This scriopt is needed by all devices --&gt;
   &lt;script src=&quot;/js/main.js&quot;&gt;&lt;/script&gt;
   &lt;?php
-  if ($viewportWidth >= 800) {
+  if ($viewportWidth &gt;= 800) {
     // We should only load this JS for large screens that use it.
     ?&gt;&lt;script src=&quot;/js/parallax.js&quot;&gt;&lt;/script&gt;&lt;?php
   }
   ?&gt;
-&lt;/body&gt;
-</code></pre>
+&lt;/body&gt;</code></pre>
+          </section>
+          <!-- [4.14] - Omitting Images Not in the Current Layout -->
+          <section>
+            <pre><code class="html">&lt;body&gt;
+  &lt;!-- This image is used on all devices. --&gt;
+  &lt;img src=&quot;img/hero.jpg&quot;&gt;
+  &lt;!-- This one is only used on phones. --&gt;
+  &lt;?php
+  if ($viewportWidth &lt; 640) {
+    &lt;img src=&quot;img/hero.jpg&quot;&gt;
+  }
+  ?&gt;
+&lt;/body&gt;</code></pre>
+          </section>
+          <!-- [4.15] - Width -->
+          <section data-state="centered">
+            <h2>
+              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <code>Width</code>
+              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+            </h2>
+          </section>
+          <!-- [4.16] - `sizes` is Tough! -->
+          <section data-state="centered">
+            <h1><code>sizes</code></h1>
+            <h3>is hard to get right!</h3>
           </section>
         </section>
         <!-- [4.0] - Network Hints -->
@@ -351,22 +384,6 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
                 <img class="section-image larger" src="img/network-cable-1x.png" srcset="img/network-cable-1x.png 1x, img/network-cable-2x.png 2x" alt="A cartoon drawing of a network cable." width="512" height="555">
               </picture>
             </div>
-          </section>
-          <!-- [4.2] - Adaptive Performance -->
-          <section data-state="centered">
-            <h2 class="uppercase">
-              Adaptive<br>
-              performance!
-            </h2>
-          </section>
-          <!-- [4.3] - MIT Article -->
-          <section data-background="img/digital-divide.png" data-background-position="center left"></section>
-          <!-- [4.4] - MIT Article Quote -->
-          <section data-background="img/digital-divide.png" data-background-color="#000000" data-background-position="center left" data-background-opacity=".25">
-            <picture>
-              <source srcset="img/article-quote-2x.webp 2x, img/article-quote-1x.webp 1x" type="image/webp">
-              <img src="img/article-quote-1x.png" srcset="img/article-quote-2x.png 2x, img/article-quote-1x.png 1x" alt="A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online." class="shadow">
-            </picture>
           </section>
           <!-- [4.5] - The RTT Header -->
           <section data-state="centered">
@@ -459,6 +476,98 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [4.10] - These Hints Should be Used Together -->
           <section data-state="centered">
             <h2 class="uppercase">These hints should be used <span class="accent">together!</span></h2>
+          </section>
+          <!-- [4.11] - An Approach to Network Quality Scoring with Client Hints (Pt. I) -->
+          <section data-state="centered">
+            <pre><code class="html">&lt;?php
+function network_quality() {
+  $quality = 1;
+
+  if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) &&
+      $_SERVER[&quot;HTTP_SAVE_DATA&quot;] === &quot;on&quot;) {
+    $quality = 0;
+    return $quality;
+  }
+
+  // ...</code></pre>
+          </section>
+          <!-- [4.12] - An Approach to Network Quality Scoring with Client Hints (Pt. II) -->
+          <section data-state="centered">
+            <pre><code class="php">  // ...
+
+  if (isset($_SERVER[&quot;HTTP_RTT&quot;])) {
+    $rtt = (int)$_SERVER[&quot;HTTP_RTT&quot;];
+  }
+
+  if (isset($_SERVER[&quot;HTTP_DOWNLINK&quot;])) {
+    $downlink = (float)$_SERVER[&quot;HTTP_DOWNLINK&quot;];
+  }
+
+  if (isset($_SERVER[&quot;HTTP_ECT&quot;])) {
+    $ect = $_SERVER[&quot;HTTP_ECT&quot;];
+  }
+
+  // ...</code></pre>
+          </section>
+          <!-- [4.13] - An Approach to Network Quality Scoring with Client Hints (Pt. III) -->
+          <section data-state="centered">
+            <pre><code class="php">  // ...
+
+  if (isset($ect)) {
+    switch ($ect) {
+      case &quot;3g&quot;:
+        $quality -= 0.2;
+
+        if (isset($rtt) && $rtt &gt; 835) {
+          $quality -= 0.1;
+        }
+
+        if (isset($downlink) && $downlink &lt; 0.385) {
+          $quality -= .05;
+        }
+        break;
+
+    // ...</code></pre>
+          </section>
+          <!-- [4.14] - An Approach to Network Quality Scoring with Client Hints (Pt. IV) -->
+          <section data-state="centered">
+            <pre><code class="php">    // ...
+
+    case &quot;2g&quot;:
+      $quality -= 0.4;
+
+      if (isset($rtt) && $rtt &gt; 1700) {
+        $quality -= 0.1;
+      }
+
+      if (isset($downlink) && $downlink &lt; 0.06) {
+        $quality -= .05;
+      }
+      break;
+
+    // ...</code></pre>
+          </section>
+          <!-- [4.15] - An Approach to Network Quality Scoring with Client Hints (Pt. V) -->
+          <section data-state="centered">
+            <pre><code class="php">    // ...
+
+    case &quot;slow-2g&quot;:
+      $quality -= 0.6;
+
+      if (isset($rtt) && $rtt &gt; 2400) {
+        $quality -= 0.1;
+      }
+
+      if (isset($downlink) && $downlink &lt; 0.033) {
+        $quality -= .05;
+      }
+      break;
+    }
+  }
+
+  return $quality;
+}
+?&gt;</code></pre>
           </section>
         </section>
       </div>
