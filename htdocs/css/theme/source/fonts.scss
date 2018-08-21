@@ -15,3 +15,12 @@
        url("../../fonts/cabin-sketch-bold.woff") format("woff");
   font-display: fallback;
 }
+
+@font-face{
+  font-family: "Fira Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/fira-mono-regular.woff2") format("woff2"),
+       url("../../fonts/fira-mono-regular.woff") format("woff");
+  font-display: fallback;
+}

@@ -111,7 +111,8 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
           <!-- [1.11] - Simplicity! -->
           <section data-state="centered">
-            <h1>Simplicity!</h1>
+            <h1 class="accent">Great!</h1>
+            <h4 class="fragment">(If you're into the whole brevity thing.)</h4>
           </section>
           <!-- [1.12] - (But Also Performance) -->
           <section data-state="centered">
@@ -128,10 +129,10 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
           <!-- [1.15] - Adaptive Performance -->
           <section data-state="centered">
-            <h2 class="uppercase">
-              Adaptive<br>
+            <h1 class="uppercase">
+              <span class="accent">Adaptive</span><br>
               performance
-            </h2>
+            </h1>
           </section>
           <!-- [1.16] - Wisconsin! -->
           <section data-state="centered">
@@ -221,7 +222,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section data-state="section-starter">
             <div class="flex-container">
               <div class="sections">
-                <h4>- Opting in</h4>
+                <h4 class="past">- Opting in</h4>
                 <h4 class="current">- Image hints</h4>
                 <h4>- Network hints</h4>
                 <h4>- Pitfalls</h4>
@@ -373,8 +374,8 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <section data-state="section-starter">
             <div class="flex-container">
               <div class="sections">
-                <h4>- Opting in</h4>
-                <h4>- Image hints</h4>
+                <h4 class="past">- Opting in</h4>
+                <h4 class="past">- Image hints</h4>
                 <h4 class="current">- Network hints</h4>
                 <h4>- Pitfalls</h4>
                 <h4>- Wrapping up</h4>
@@ -435,7 +436,7 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
             <table>
               <thead>
                 <tr>
-                  <th>ECT Value</th>
+                  <th><code>ECT</code> String</th>
                   <th>Min. RTT (ms)</th>
                   <th>Max Downlink (Kbps)</th>
                 </tr>
@@ -443,23 +444,23 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
               <tbody>
                 <tr>
                   <td><code>slow-2g</code></td>
-                  <td><code>2,000</code></td>
-                  <td><code>50</code></td>
+                  <td class="right"><code>2,000</code></td>
+                  <td class="right"><code>50</code></td>
                 </tr>
                 <tr>
                   <td><code>2g</code></td>
-                  <td><code>1,400</code></td>
-                  <td><code>70</code></td>
+                  <td class="right"><code>1,400</code></td>
+                  <td class="right"><code>70</code></td>
                 </tr>
                 <tr>
                   <td><code>3g</code></td>
-                  <td><code>270</code></td>
-                  <td><code>700</code></td>
+                  <td class="right"><code>270</code></td>
+                  <td class="right"><code>700</code></td>
                 </tr>
                 <tr>
                   <td><code>4g</code></td>
-                  <td><code>0</code></td>
-                  <td><code>&infin;</code></td>
+                  <td class="right"><code>0</code></td>
+                  <td class="right"><code>&infin;</code></td>
                 </tr>
               </tbody>
             </table>
@@ -569,6 +570,98 @@ function network_quality() {
 }
 ?&gt;</code></pre>
           </section>
+          <!-- [4.16] - What Can We Do With This? -->
+          <section>
+            <h2 class="uppercase accent">Yeah, but<span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></h2>
+            <h3 class="fragment">What can we do with this?</h3>
+            <ul class="fragment">
+              <li>Serve lower-density images for slower connections.</li>
+              <li class="fragment">Serve still images in lieu of video.</li>
+              <li class="fragment">Omit web fonts.</li>
+              <li class="fragment">Omit unnecessary JavaScript.</li>
+            </ul>
+          </section>
+          <!-- [4.17] - Example -->
+          <section>
+            <pre><code class="html">&lt;head&gt;
+  &lt;title&gt;Sconnie Timber&lt;/title&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;?php
+  // Only show fonts if network quality score is high enough
+  if (network_quality() &gt; 0.5) {
+    ?&gt;
+    &lt;link rel=&quot;stylesheet&quot;
+          href="https://fonts.googleapis.com/css?family=Lato:400&quot;
+          type=&quot;text/css&quot;&gt;
+    &lt;?php
+  }
+  ?&gt;
+  &lt;link rel="stylesheet" href="css/main.css" type="text/css"&gt;
+&lt;/head&gt;</code></pre>
+          </section>
+          <!-- [4.18] - JavaScript Equivalents -->
+          <section data-state="centered">
+            <h2 class="uppercase">JS equivalents</h2>
+            <h5>(in <code>navigator.connection</code>)</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Associated Hint</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>rtt</code></td>
+                  <td><code>RTT</code></td>
+                </tr>
+                <tr>
+                  <td><code>downlink</code></td>
+                  <td><code>Downlink</code></td>
+                </tr>
+                <tr>
+                  <td><code>effectiveType</code></td>
+                  <td><code>ECT</code></td>
+                </tr>
+                <tr>
+                  <td><code>saveData</code></td>
+                  <td><code>Save-Data</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [4.19] - Service Workers! -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/service-worker-1x.webp 1x, img/service-worker-2x.webp 2x" type="image/webp">
+              <img class="section-image medium" src="img/service-worker-1x.png" srcset="img/service-worker-1x.png 1x, img/service-worker-2x.png 2x" alt="A cartoon drawing of a gear representing service worker technology." width="640" height="585">
+            </picture>
+            <h3 class="uppercase">Service Workers</h3>
+          </section>
+          <!-- [4.20] - Service Worker Example -->
+          <section>
+            <pre><code class="javascript">self.addEventListener(&quot;fetch&quot;, event => {
+  let saveData = false;
+
+  // Let's see about that netinfo API
+  if (&quot;connection&quot; in navigator) {
+    saveData = navigator.connection.saveData;
+  }
+
+  event.respondWith(() => {
+    if (/\.woff2?$/i.test(event.request.url) === true &&
+        saveData === true) {
+      // Aw hell naw
+      return new Response(new Blob(), {
+        status: 204
+      });
+    }
+
+    // Okily dokily
+    return fetch(event.request);
+  });
+});</code></pre>
+          </section>
         </section>
       </div>
     </div>
@@ -594,11 +687,6 @@ function network_quality() {
           }
         }]
       });
-    </script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js");
-      }
     </script>
   </body>
 </html>

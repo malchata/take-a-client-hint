@@ -29,7 +29,7 @@ $headingTextTransform: none;
 .reveal {
   code,
   pre {
-    font-family: "Inconsolata", "Consolas", monospace;
+    font-family: "Fira Mono", "Consolas", monospace;
   }
 
   pre {
@@ -168,6 +168,12 @@ $headingTextTransform: none;
       margin: 0.5em 0 1.5em;
     }
 
+    table {
+      font-family: $mainFont;
+      font-size: $heading5Size;
+      line-height: 1.309;
+    }
+
     li {
       margin-bottom: 0.5em;
       color: $lapisLazuli;
@@ -246,22 +252,24 @@ $headingTextTransform: none;
   }
 
   table {
-    width: 100%;
     border-collapse: collapse;
-    margin: 0.5em 0 0;
+    margin: .5em auto 0;
   }
 
   th,
   td {
     color: $lapisLazuli;
+    text-align: left;
+    padding-left: .5em;
+    padding-right: .5em;
+    border: .05em solid $lapisLazuli;
+
+    &.right {
+      text-align: right;
+    }
 
     code {
       font-weight: 400;
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      text-align: right;
     }
   }
 
@@ -310,6 +318,12 @@ body {
             &.current {
               opacity: 1;
               color: $vividAuburn;
+            }
+
+            &.past {
+              opacity: 1;
+              color: $lapisLazuli;
+              text-decoration: line-through;
             }
           }
         }
