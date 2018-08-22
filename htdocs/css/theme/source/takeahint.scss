@@ -80,6 +80,10 @@ $headingTextTransform: none;
     max-width: percentage(5 / 6);
   }
 
+  .bordered {
+    border: .15em solid $lapisLazuli;
+  }
+
   section {
     a {
       color: $vividAuburn;
@@ -172,6 +176,8 @@ $headingTextTransform: none;
       font-family: $mainFont;
       font-size: $heading5Size;
       line-height: 1.309;
+      border-collapse: collapse;
+      margin: .5em auto 0;
     }
 
     li {
@@ -249,11 +255,6 @@ $headingTextTransform: none;
       font-size: 0.8333333333em;
       margin: 0.3333333333em 0 0;
     }
-  }
-
-  table {
-    border-collapse: collapse;
-    margin: .5em auto 0;
   }
 
   th,
