@@ -68,6 +68,10 @@ $headingTextTransform: none;
     color: $vividAuburn;
   }
 
+  .small {
+    max-width: percentage(1 / 3);
+  }
+
   .medium {
     max-width: percentage(1 / 2);
   }
@@ -276,9 +280,8 @@ $headingTextTransform: none;
 
   hr {
     border-style: none;
-    //border-top: 1px solid $ghostWhite;
-    margin: 0.25em 0;
-    opacity: 0.5;
+    border-top: 2px solid $lapisLazuli;
+    margin: 0.33em 0;
   }
 }
 
