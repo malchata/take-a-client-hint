@@ -17,19 +17,19 @@ $headingLetterSpacing: normal;
 $headingTextTransform: none;
 
 ::selection {
-  color: $ghostWhite;
-  background-color: $vividAuburn;
+  color: $selectionColor;
+  background-color: $selectionBackgroundColor;
 }
 
 ::-moz-selection {
-  color: $ghostWhite;
-  background-color: $vividAuburn;
+  color: $selectionColor;
+  background-color: $selectionBackgroundColor;
 }
 
 .reveal {
   code,
   pre {
-    font-family: "Fira Mono", "Consolas", monospace;
+    font-family: $monospace;
   }
 
   pre {
@@ -68,6 +68,10 @@ $headingTextTransform: none;
     color: $vividAuburn;
   }
 
+  .smallest {
+    max-width: 30%;
+  }
+
   .small {
     max-width: percentage(1 / 3);
   }
@@ -85,7 +89,7 @@ $headingTextTransform: none;
   }
 
   .bordered {
-    border: .15em solid $lapisLazuli;
+    border: 2px solid $lapisLazuli;
   }
 
   section {
@@ -137,7 +141,7 @@ $headingTextTransform: none;
     h4,
     h5,
     h6 {
-      line-height: 1.618;
+      line-height: 1.309;
       text-align: left;
       font-weight: 700;
       margin: 0;
@@ -149,7 +153,6 @@ $headingTextTransform: none;
 
     blockquote {
       background: none;
-      // color: $ghostWhite;
       text-align: left;
       width: 100%;
       box-shadow: none;
@@ -157,7 +160,6 @@ $headingTextTransform: none;
       font-size: 0.875em;
       padding: 0 0 0 1em;
       text-transform: none;
-      //border-left: .125em solid transparentize($terraCotta, .25);
 
       code {
         font-style: normal;
@@ -235,29 +237,6 @@ $headingTextTransform: none;
   picture {
     & > .stretch {
       width: 100%;
-    }
-  }
-
-  blockquote {
-    background: none;
-    //color: $ghostWhite;
-    text-align: left;
-    width: 100%;
-    box-shadow: none;
-    line-height: 1.618;
-    padding: 0 0 0 1em;
-    //border-left: .125em solid transparentize($terraCotta, .25);
-
-    code {
-      font-style: normal;
-      font-size: 0.9em;
-    }
-
-    cite {
-      text-align: right;
-      display: block;
-      font-size: 0.8333333333em;
-      margin: 0.3333333333em 0 0;
     }
   }
 

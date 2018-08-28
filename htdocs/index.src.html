@@ -19,14 +19,14 @@
             <h1 class="uppercase">Take a</h1>
             <h3>(client)</h3>
             <h1 class="uppercase">Hint</h1>
-            <h6>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">twitter.com/malchata</a> &mdash; <a href="https://jeremy.codes" rel="noopener">jeremy.codes</a></h6>
+            <h5>Jeremy Wagner - <a href="https://twitter.com/malchata" rel="noopener">@malchata</a> - <a href="https://jeremy.codes" rel="noopener">jeremy.codes</a></h5>
           </section>
           <!-- [0.2] - Hello! -->
           <section data-state="centered">
             <div class="flex-container">
               <div>
                 <h1>Hi!</h1>
-                <h4>I'm Jeremy!</h4>
+                <h3>I'm Jeremy!</h3>
               </div>
               <picture>
                 <source srcset="img/me-1x.webp 1x, img/me-2x.webp 2x" type="image/webp">
@@ -65,11 +65,10 @@
           </section>
           <!-- [1.5] - Content Negotiation -->
           <section data-state="centered">
-            <h4>Client hints are all about</h4>
-            <h2 class="uppercase accent">
+            <h1 class="uppercase accent">
               Content<br>
               negotiation
-            </h2>
+            </h1>
           </section>
           <!-- [1.6] - The HTTP Accept Header -->
           <section data-state="centered">
@@ -95,7 +94,7 @@
             <h4>
               <code>Accept: image/webp,image/*</code>
             </h4>
-            <h5 class="fragment">(Contextual. Also truncated for brevity.)</h5>
+            <h4 class="fragment">(Contextual, truncated for brevity.)</h4>
           </section>
           <!-- [1.9] - Rewriting the Request -->
           <section data-state="centered">
@@ -106,41 +105,37 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
           <!-- [1.10] - Rewriting image markup -->
           <section data-state="centered">
-            <pre><code class="html">&lt;!-- If WebP is supported, this JPEG rewrites to a WebP --&gt;
+            <pre><code class="html">&lt;!-- If WebP is supported, this JPEG request is
+     automatically rewritten to a WebP! --&gt;
 &lt;img src=&quot;whats-up.jpg&quot; alt=&quot;I'm an image!&quot;&gt;</code></pre>
           </section>
           <!-- [1.11] - Simplicity! -->
           <section data-state="centered">
-            <h1 class="accent">Great!</h1>
+            <h1 class="accent uppercase">Great!</h1>
             <h4 class="fragment">(If you're into the whole brevity thing.)</h4>
           </section>
-          <!-- [1.12] - (But Also Performance) -->
-          <section data-state="centered">
-            <h3>(But also performance)</h3>
-          </section>
-          <!-- [1.13] - MIT Article -->
+          <!-- [1.12] - MIT Article -->
           <section data-background="img/digital-divide.png" data-background-position="center left"></section>
-          <!-- [1.14] - MIT Article Quote -->
+          <!-- [1.13] - MIT Article Quote -->
           <section data-background="img/digital-divide.png" data-background-color="#000000" data-background-position="center left" data-background-opacity=".25">
             <picture>
               <source srcset="img/article-quote-2x.webp 2x, img/article-quote-1x.webp 1x" type="image/webp">
               <img src="img/article-quote-1x.png" srcset="img/article-quote-2x.png 2x, img/article-quote-1x.png 1x" alt="A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online." class="shadow stretch">
             </picture>
           </section>
-          <!-- [1.15] - Adaptive Performance -->
+          <!-- [1.14] - Adaptive Performance -->
           <section data-state="centered">
             <h1 class="uppercase">
               <span class="accent">Adaptive</span><br>
               performance
             </h1>
           </section>
-          <!-- [1.16] - Wisconsin! -->
+          <!-- [1.15] - The Case Study -->
           <section data-state="centered">
-            <h1 class="uppercase accent">Behold:</h1>
-            <h2 class="uppercase">The case study<span class="fragment accent" data-fragment-index="1">*</span></h3>
-            <h5 class="fragment accent" data-fragment-index="1">*Fictional, of course.</h5>
+            <h2 class="uppercase">The case study<span class="fragment accent" data-fragment-index="1">*</span></h2>
+            <h5 class="fragment accent" data-fragment-index="1">*Totally fictional.</h5>
           </section>
-          <!-- [1.17] - A Man of Action -->
+          <!-- [1.16] - A Man of Action -->
           <section data-state="centered">
             <picture>
               <source srcset="img/seagal-zoom.webp" type="image/webp">
@@ -158,11 +153,11 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section data-state="centered">
             <img src="img/sconnie.svg" alt="An outline of the state of Wisconsin." class="stretch">
           </section>
-          <!-- [1.19] - Broadband County Map -->
+          <!-- [1.19] - County Broadband Map -->
           <section data-state="centered">
             <picture>
               <source srcset="img/broadband-map-1x.webp 1x, img/broadband-map-2x.webp 2x" type="image/webp">
-              <img class="large bordered" src="img/broadband-map-1x.png" srcset="img/broadband-map-1x.png 1x, img/broadband-map-2x.png 2x" alt="A map showing broadband connectivity for Buffalo County, WI in the United States." class="stretch">
+              <img class="large bordered" src="img/broadband-map-1x.png" srcset="img/broadband-map-1x.png 1x, img/broadband-map-2x.png 2x" alt="A map showing broadband connectivity for Buffalo County, WI in the United States.">
             </picture>
           </section>
           <!-- [1.20] - Performance Bridges the Gap -->
@@ -172,7 +167,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
           <!-- [1.21] - Performance Bridges the Gap -->
           <section data-state="centered">
-            <h2 class="accent uppercase">Client hints</h2>
+            <h1 class="accent uppercase">Client hints</h1>
             <h2 class="uppercase">go a bit further</h2>
           </section>
         </section>
@@ -183,7 +178,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
             <div class="flex-container">
               <div class="sections">
                 <h4 class="current">- Opting in</h4>
-                <h4>- Image hints</h4>
+                <h4>- Device Hints</h4>
                 <h4>- Network hints</h4>
                 <h4>- Pitfalls</h4>
                 <h4>- Wrapping up</h4>
@@ -205,7 +200,10 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               <source srcset="img/chrome-icon-1x.webp 1x, img/chrome-icon-2x.webp 2x" type="image/webp">
               <img src="img/chrome-icon-1x.png" srcset="img/chrome-icon-1x.png 1x, img/chrome-icon-2x.png 2x" alt="A cartoon drawing of the Chrome icon." width="407" height="405">
             </picture>
-            <h4 class="uppercase">Client hints work in <span class="accent">Chrome</span> only!</h4>
+            <h4 class="uppercase">
+              Client hints work in<br>
+              <span class="accent">Chrome only!</span>
+            </h4>
             <h5 class="fragment">(And derived browsers.)</h5>
           </section>
           <!-- [2.4] - Client Hints Require HTTPS! -->
@@ -260,7 +258,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
             <div class="flex-container">
               <div class="sections">
                 <h4 class="past">- Opting in</h4>
-                <h4 class="current">- Image hints</h4>
+                <h4 class="current">- Device Hints</h4>
                 <h4>- Network hints</h4>
                 <h4>- Pitfalls</h4>
                 <h4>- Wrapping up</h4>
@@ -299,9 +297,8 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
        alt=&quot;I'm an image!&quot;&gt;
 &lt;/picture&gt;</code></pre>
           </section>
-          <!-- [3.4] - Where We Want to Be -->
-          <section data-state="centered">
-            <h3>Where we want to get to:</h3>
+          <!-- [3.4] - What We Want -->
+          <section>
             <pre><code class="html">&lt;!-- Ah, much simpler! --&gt;
 &lt;img src=&quot;/image.jpg&quot; alt=&quot;I'm an image!&quot;&gt;</code></pre>
           </section>
@@ -314,24 +311,31 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
             </h1>
             <h4 class="fragment">(Device Pixel Ratio.)</h4>
           </section>
-          <!-- [3.6] - srcset Code -->
+          <!-- [3.6] - `sizes` is Required! -->
+          <section data-state="centered">
+            <h3>
+              <code>DPR: 2</code>
+            </h3>
+          </section>
+          <!-- [3.7] - srcset Code -->
           <section data-state="centered">
             <pre><code class="html">&lt;img src=&quot;whats-up-1x.png&quot;
      srcset=&quot;whats-up-1x.png 1x, whats-up-2x.png 2x&quot;
      alt=&quot;I'm an image!&quot;&gt;</code></pre>
           </section>
-          <!-- [3.7] - Negotiating DPR on the Back End -->
+          <!-- [3.8] - Negotiating DPR on the Back End -->
           <section data-state="centered">
             <pre><code class="html">&lt;!-- Of course, we're just _assuming_ this is available... --&gt;
 &lt;?php $dpr = $_SERVER[&quot;HTTP_DPR&quot;]; ?&gt;
 &lt;img src=&quot;whats-up-&lt;?php echo($dpr); ?&gt;x.jpg&quot; alt=&quot;I'm an image!&quot;&gt;
 </code></pre>
           </section>
-          <!-- [3.8] - Simplicity! -->
-          <section data-state="centered">
-            <h1>Simplicity!</h1>
+          <!-- [3.9] - How Sconnie Timber Does It -->
+          <section>
+            <pre><code class="html">&lt;!-- This actually points to a PHP script --&gt;
+&lt;img src=&quot;/image/dpr:true/contact-img.jpg&quot;&gt;</code></pre>
           </section>
-          <!-- [3.9] - Viewport-Width -->
+          <!-- [3.10] - Viewport-Width -->
           <section data-state="centered">
             <h3>
               <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
@@ -339,14 +343,21 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
             </h3>
           </section>
-          <!-- [3.10] - Viewport Width Illustration -->
+          <!-- [3.10] - `sizes` is Required! -->
+          <section data-state="centered">
+            <h3>
+              <code>Viewport-Width: 320</code>
+            </h3>
+            <h4 class="fragment">(In CSS pixels)</h4>
+          </section>
+          <!-- [3.11] - Viewport Width Illustration -->
           <section data-state="centered">
             <picture>
               <source srcset="img/viewport-1x.webp 1x, img/viewport-2x.webp 2x" type="image/webp">
               <img class="section-image large" src="img/viewport-1x.png" srcset="img/viewport-1x.png 1x, img/viewport-2x.png 2x" alt="A cartoon drawing of browser viewport diagram." width="446" height="512">
             </picture>
           </section>
-          <!-- [3.11] - Viewport-Width -->
+          <!-- [3.12] - Uses for Viewport-Width -->
           <section>
             <h3>Uses for <code>Viewport-Width</code>:</h3>
             <ul>
@@ -355,7 +366,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               <li class="fragment">Functionality omission <span class="fragment">(e.g., JavaScript).</span></li>
             </ul>
           </section>
-          <!-- [3.12] - Capturing Viewport-Width -->
+          <!-- [3.13] - Capturing Viewport-Width -->
           <section>
             <pre><code class="html">&lt;?php
 $viewportWidth = false;
@@ -365,44 +376,78 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [3.13] - Omitting JS with Viewport-Width -->
+          <!-- [3.14] - Omitting JS with Viewport-Width -->
           <section>
             <pre><code class="html">&lt;body&gt;
-  &lt;!-- This scriopt is needed by all devices --&gt;
+  &lt;div class=&quot;big-hero-banner parallax&quot;&gt;&lt;/div&gt;
+  &lt;!-- ... --&gt;
+  &lt;!-- This is a critical script for all devices --&gt;
   &lt;script src=&quot;/js/main.js&quot;&gt;&lt;/script&gt;
   &lt;?php
   if ($viewportWidth &gt;= 800) {
-    // We should only load this JS for large screens that use it.
+    // Only load this script for large screens that need it.
     ?&gt;&lt;script src=&quot;/js/parallax.js&quot;&gt;&lt;/script&gt;&lt;?php
   }
   ?&gt;
 &lt;/body&gt;</code></pre>
           </section>
-          <!-- [3.14] - Omitting Images Not in the Current Layout -->
+          <!-- [3.15] - Omitting Images Not in the Current Layout -->
           <section>
             <pre><code class="html">&lt;body&gt;
   &lt;!-- This image is used on all devices. --&gt;
   &lt;img src=&quot;img/hero.jpg&quot;&gt;
-  &lt;!-- This one is only used on phones. --&gt;
+  &lt;!-- This one is only used on large screens. --&gt;
   &lt;?php
-  if ($viewportWidth &lt; 640) {
-    &lt;img src=&quot;img/hero.jpg&quot;&gt;
+  if ($viewportWidth &gt;= 640) {
+    &lt;img src=&quot;img/aside.jpg&quot;&gt;
   }
   ?&gt;
 &lt;/body&gt;</code></pre>
           </section>
-          <!-- [3.15] - Width -->
+          <!-- [3.16] - Width -->
           <section data-state="centered">
             <h2>
               <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
               <code>Width</code>
               <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
             </h2>
+            <h5 class="fragment">(Use this for image selection instead.)</h5>
           </section>
-          <!-- [3.16] - `sizes` is Tough! -->
+          <!-- [3.17] - Width Only Occurs on Image Requests! -->
           <section data-state="centered">
-            <h1><code>sizes</code></h1>
-            <h3>is hard to get right!</h3>
+            <h2><code>Width</code></h2>
+            <h4>Only occurs on image requests!</h4>
+          </section>
+          <!-- [3.18] - Width Requires `sizes` on Image Requests! -->
+          <section data-state="centered">
+            <h2><code>Width</code></h2>
+            <h4>requires <code>sizes</code> to be used<br></h4>
+          </section>
+          <!-- [3.19] - Sample Request -->
+          <section>
+            <pre><code class="html">&lt;img src=&quot;/image/slider-01.jpg&quot;
+     sizes=&quot;(min-width: 620px) 600px,
+            94.7916666667vw&quot;&gt;</code></pre>
+          </section>
+          <!-- [3.20] - Width Example -->
+          <section data-state="centered">
+            <h2><code>Width: 684</code></h2>
+          </section>
+          <!-- [3.21] - Intrinsic Size -->
+          <section data-state="centered">
+            <h2 class="uppercase">Intrinsic size</h2>
+            <h4 class="fragment">The size of a resource in physical pixels.</h4>
+          </section>
+          <!-- [3.22] - Intrinsic Size -->
+          <section data-state="centered">
+            <h2 class="uppercase">Density Corrected Intrinsic size</h2>
+            <h4 class="fragment">The intrinsic size, but multiplied by <code>DPR</code> to correct for pixel density.</h4>
+          </section>
+          <!-- [3.23] - Width Requires `sizes` on Image Requests! -->
+          <section data-state="centered">
+            <h2><code>Width</code></h2>
+            <h4>Takes care of this for you<span class="accent fragment" data-fragment-index="1">*</span></h4>
+            <h5 class="fragment" data-fragment-index="1"><span class="accent">*</span>Where applicable</h5>
           </section>
         </section>
         <!-- [4.0] - Network Hints -->
@@ -412,7 +457,7 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
             <div class="flex-container">
               <div class="sections">
                 <h4 class="past">- Opting in</h4>
-                <h4 class="past">- Image hints</h4>
+                <h4 class="past">- Device Hints</h4>
                 <h4 class="current">- Network hints</h4>
                 <h4>- Pitfalls</h4>
                 <h4>- Wrapping up</h4>
@@ -551,7 +596,7 @@ function network_quality() {
           <section data-state="centered">
             <pre><code class="php">  // ...
 
-  if (isset($ect)) {
+  if (isset($rtt) && isset($downlink) && isset($ect)) {
     switch ($ect) {
       case &quot;3g&quot;:
         $quality -= 0.2;
@@ -699,6 +744,22 @@ function network_quality() {
   });
 });</code></pre>
           </section>
+          <!-- [4.21] - When Sites Don't Adapt -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/sconnie-no-hints-1x.webp 1x, img/sconnie-no-hints-2x.webp 2x" type="image/webp">
+              <img class="smallest bordered" src="img/sconnie-no-hints-1x.png" srcset="img/sconnie-no-hints-1x.png 1x, img/sconnie-no-hints-2x.png 2x" alt="The Sconnie Timber site when no client hints are used to modify the response." width="328" height="667">
+            </picture>
+            <h4>When sites don't adapt.</h4>
+          </section>
+          <!-- [4.22] - When Sites Do Adapt -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/sconnie-hints-1x.webp 1x, img/sconnie-hints-2x.webp 2x" type="image/webp">
+              <img class="smallest bordered" src="img/sconnie-hints-1x.png" srcset="img/sconnie-hints-1x.png 1x, img/sconnie-hints-2x.png 2x" alt="The Sconnie Timber site when no client hints are used to modify the response." width="328" height="667">
+            </picture>
+            <h4>When sites do adapt.</h4>
+          </section>
         </section>
         <!-- [5.0] - Pitfalls -->
         <section>
@@ -707,7 +768,7 @@ function network_quality() {
             <div class="flex-container">
               <div class="sections">
                 <h4 class="past">- Opting in</h4>
-                <h4 class="past">- Image hints</h4>
+                <h4 class="past">- Device Hints</h4>
                 <h4 class="past">- Network hints</h4>
                 <h4 class="current">- Pitfalls</h4>
                 <h4>- Wrapping up</h4>
@@ -745,7 +806,7 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
   ?&gt;&lt;img src=&quot;some-image.jpg&quot;&gt;&lt;?php
 }
 ?&gt;</code></pre>
-            <h5>URI: <code>/contact-us</code></h5>
+            <h4>URI: <code>/contact-us</code></h4>
           </section>
           <!-- [5.5] - Setting Vary -->
           <section>
@@ -772,8 +833,30 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
               <source srcset="img/chrome-icon-1x.webp 1x, img/chrome-icon-2x.webp 2x" type="image/webp">
               <img src="img/chrome-icon-1x.png" srcset="img/chrome-icon-1x.png 1x, img/chrome-icon-2x.png 2x" alt="A cartoon drawing of the Chrome icon." width="407" height="405">
             </picture>
-            <h4 class="uppercase">Client hints work in <span class="accent">Chrome</span> only!</h4>
+            <h4 class="uppercase">
+              Client hints work in<br>
+              <span class="accent">Chrome only!</span>
+            </h4>
             <h5 class="fragment">(And derived browsers.)</h5>
+          </section>
+        </section>
+        <!-- [6.0] - Pitfalls -->
+        <section>
+          <!-- [6.1] - Pitfalls -->
+          <section data-state="section-starter">
+            <div class="flex-container">
+              <div class="sections">
+                <h4 class="past">- Opting in</h4>
+                <h4 class="past">- Device Hints</h4>
+                <h4 class="past">- Network hints</h4>
+                <h4 class="past">- Pitfalls</h4>
+                <h4 class="current">- Wrapping up</h4>
+              </div>
+              <picture>
+                <source srcset="img/opt-in-out-1x.webp 1x, img/opt-in-out-2x.webp 2x" type="image/webp">
+                <img class="section-image" src="img/opt-in-out-1x.png" srcset="img/opt-in-out-1x.png 1x, img/opt-in-out-2x.png 2x" alt="A cartoon drawing of two checkboxes with a pencil near them. One says 'opt out', while the other says 'opt in'. The 'opt in' box is checked." width="640" height="398">
+              </picture>
+            </div>
           </section>
         </section>
       </div>

@@ -12,16 +12,19 @@ $licorice: #12100e;
 $onyx: #3d2b3d;
 
 // Primary/body text
-$mainFont: "Cabin Sketch", sans-serif;
+$mainFont: "Itim", sans-serif;
 $mainFontSize: 42px;
 $mainColor: $ghostWhite;
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
 
+// Monospaced Font
+$monospace: "Fira Mono", "Consolas", monospace;
+
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-$headingFont: "Cabin Sketch", sans-serif;
+$headingFont: "Itim", sans-serif;
 $headingColor: #eee;
 $headingLineHeight: 1.618;
 $headingLetterSpacing: normal;
@@ -42,8 +45,8 @@ $linkColor: $vividAuburn;
 $linkColorHover: lighten($linkColor, 20%);
 
 // Text selection
-$selectionBackgroundColor: #FF5E99;
-$selectionColor: #fff;
+$selectionBackgroundColor: $lapisLazuli;
+$selectionColor: $ghostWhite;
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
