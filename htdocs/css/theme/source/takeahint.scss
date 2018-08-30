@@ -27,19 +27,6 @@ $headingTextTransform: none;
 }
 
 .reveal {
-  code,
-  pre {
-    font-family: $monospace;
-  }
-
-  pre {
-    width: 100%;
-    box-shadow: none;
-    font-size: 1.5278838808em;
-    text-align: left;
-    line-height: 1.309;
-  }
-
   .slides {
     section {
       .fragment {
@@ -151,6 +138,23 @@ $headingTextTransform: none;
       }
     }
 
+    code,
+    pre {
+      font-family: $monospace;
+    }
+
+    pre {
+      width: 100%;
+      box-shadow: none;
+      font-size: 1.5278838808em;
+      text-align: left;
+      line-height: 1.309;
+
+      & + * {
+        margin-top: .5em;
+      }
+    }
+
     blockquote {
       background: none;
       text-align: left;
@@ -172,10 +176,6 @@ $headingTextTransform: none;
         font-size: 0.8333333333em;
         margin: 0.3333333333em 0 0;
       }
-    }
-
-    h3 + pre {
-      margin: 0.5em 0 1.5em;
     }
 
     table {

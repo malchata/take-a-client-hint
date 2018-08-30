@@ -8,13 +8,11 @@ $backgroundColor: #2b2b2b;
 $ghostWhite: #fafaff;
 $lapisLazuli: #275dad;
 $vividAuburn: #8c271e;
-$licorice: #12100e;
-$onyx: #3d2b3d;
 
 // Primary/body text
-$mainFont: "Itim", sans-serif;
+$mainFont: "Cabin Sketch", sans-serif;
 $mainFontSize: 42px;
-$mainColor: $ghostWhite;
+$mainColor: $lapisLazuli;
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
@@ -24,7 +22,7 @@ $monospace: "Fira Mono", "Consolas", monospace;
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-$headingFont: "Itim", sans-serif;
+$headingFont: $mainFont;
 $headingColor: #eee;
 $headingLineHeight: 1.618;
 $headingLetterSpacing: normal;
