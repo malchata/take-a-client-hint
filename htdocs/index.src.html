@@ -19,7 +19,7 @@
             <h1 class="uppercase">Take a</h1>
             <h2>(client)</h2>
             <h1 class="uppercase">Hint</h1>
-            <h5>Jeremy Wagner - <a href="https://twitter.com/malchata" rel="noopener">@malchata</a> - <a href="https://www.jeremywagner.me" rel="noopener">jeremywagner.me</a></h5>
+            <h6>Jeremy Wagner :: <a href="https://twitter.com/malchata" rel="noopener">twitter.com/malchata</a> :: <a href="https://jeremy.codes" rel="noopener">jeremy.codes</a></h6>
           </section>
           <!-- [0.2] - Hello! -->
           <section data-state="centered">
@@ -40,13 +40,13 @@
           <!-- [1.1] - What are Client Hints? -->
           <section data-state="centered">
             <h3>What are</h3>
-            <h1 class="uppercase">client hints?</h1>
+            <h1 class="accent uppercase">client hints?</h1>
           </section>
           <!-- [1.2] - The Clueless Browser -->
           <section data-state="centered">
             <picture>
               <source srcset="img/clueless-browser-1x.webp 1x, img/clueless-browser-2x.webp 2x" type="image/webp">
-              <img src="img/clueless-browser-1x.png" srcset="img/clueless-browser-1x.png 1x, img/clueless-browser-2x.png 2x" alt="A cartoon drawing of a browser with a question mark hovering over it.">
+              <img class="medium" src="img/clueless-browser-1x.png" srcset="img/clueless-browser-1x.png 1x, img/clueless-browser-2x.png 2x" alt="A cartoon drawing of a browser with a question mark hovering over it.">
             </picture>
           </section>
           <!-- [1.3] - The Clueless Server -->
@@ -74,9 +74,15 @@
           <section data-state="centered">
             <h2>The HTTP</h2>
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Accept</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h2>header</h2>
           </section>
@@ -125,45 +131,26 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               performance
             </h1>
           </section>
-          <!-- [1.14] - The Case Study -->
-          <section data-state="centered">
-            <h2 class="uppercase">The case study<span class="fragment accent" data-fragment-index="1">*</span></h2>
-            <h5 class="fragment accent" data-fragment-index="1">*Totally fictional.</h5>
-          </section>
-          <!-- [1.15] - A Man of Action -->
-          <section data-state="centered">
-            <picture>
-              <source srcset="img/seagal-zoom.webp" type="image/webp">
-              <img src="img/seagal-zoom.gif" alt="A zoom shot into Steven Seagal's face." class="stretch">
-            </picture>
-          </section>
-          <!-- [1.16] - A Man of Leisure -->
-          <section data-state="centered">
-            <picture>
-              <source srcset="img/seagal-carrot.webp" type="image/webp">
-              <img src="img/seagal-carrot.gif" alt="An animated GIF of Steven Seagal munching on a carrot." class="stretch">
-            </picture>
-          </section>
-          <!-- [1.17] - Wisconsin! -->
+          <!-- [1.14] - Wisconsin! -->
           <section data-state="centered">
             <img src="img/sconnie.svg" alt="An outline of the state of Wisconsin." class="stretch">
           </section>
-          <!-- [1.18] - County Broadband Map -->
+          <!-- [1.15] - County Broadband Map -->
           <section data-state="centered">
             <picture>
               <source srcset="img/broadband-map-1x.webp 1x, img/broadband-map-2x.webp 2x" type="image/webp">
               <img class="large bordered" src="img/broadband-map-1x.png" srcset="img/broadband-map-1x.png 1x, img/broadband-map-2x.png 2x" alt="A map showing broadband connectivity for Buffalo County, WI in the United States.">
             </picture>
           </section>
-          <!-- [1.19] - Performance Bridges the Gap -->
+          <!-- [1.16] - Performance Bridges the Gap -->
           <section data-state="centered">
             <h1 class="accent uppercase">Performance</h1>
             <h2 class="uppercase">bridges the gap</h2>
           </section>
-          <!-- [1.20] - Performance Bridges the Gap -->
+          <!-- [1.17] - Client Hints Can Take us Further -->
           <section data-state="centered">
             <h1 class="accent uppercase">Client hints</h1>
-            <h2 class="uppercase">go a bit further</h2>
+            <h2 class="uppercase">can take us further</h2>
           </section>
         </section>
         <!-- [2.0] - Opting In -->
@@ -175,8 +162,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
                 <h4 class="current">- Opting in</h4>
                 <h4>- Device Hints</h4>
                 <h4>- Network hints</h4>
-                <h4>- Pitfalls</h4>
-                <h4>- Wrapping up</h4>
+                <h4>- Parting Notes</h4>
               </div>
               <picture>
                 <source srcset="img/opt-in-out-1x.webp 1x, img/opt-in-out-2x.webp 2x" type="image/webp">
@@ -254,8 +240,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
                 <h4 class="past">- Opting in</h4>
                 <h4 class="current">- Device Hints</h4>
                 <h4>- Network hints</h4>
-                <h4>- Pitfalls</h4>
-                <h4>- Wrapping up</h4>
+                <h4>- Parting Notes</h4>
               </div>
               <picture>
                 <source srcset="img/mobile-device-1x.webp 1x, img/mobile-device-2x.webp 2x" type="image/webp">
@@ -294,7 +279,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <!-- [3.4] - What We Want -->
           <section>
             <pre><code class="html">&lt;!-- Ah, much simpler! --&gt;
-&lt;img src=&quot;/image.jpg&quot; alt=&quot;I'm an image!&quot;&gt;</code></pre>
+&lt;img src=&quot;/images/image.jpg&quot; alt=&quot;I'm an image!&quot;&gt;</code></pre>
             <h5 class="fragment">(we want to get here)</h5>
           </section>
           <!-- [3.5] - Cloudinary Blog -->
@@ -309,9 +294,15 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <!-- [3.7] - DPR -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>DPR</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h4 class="fragment">Device Pixel Ratio</h4>
           </section>
@@ -338,13 +329,20 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section>
             <pre><code class="html">&lt;!-- This actually points to a PHP script --&gt;
 &lt;img src=&quot;/image/dpr:true/contact-img.jpg&quot;&gt;</code></pre>
+            <pre class="fragment"><code>                 ^^^^^^^^</code></pre>
           </section>
           <!-- [3.12] - Viewport-Width -->
           <section data-state="centered">
             <h3>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Viewport-Width</code>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h3>
           </section>
           <!-- [3.13] - Viewport Width Illustration -->
@@ -365,7 +363,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section>
             <h3>Uses for <code>Viewport-Width</code>:</h3>
             <ul>
-              <li class="fragment">Image selection <span class="fragment">(Use <code>Width</code> instead).</span></li>
+              <li class="fragment">Image selection <span class="fragment">(use <code>Width</code> instead).</span></li>
               <li class="fragment">Image or video omission.</li>
               <li class="fragment">Functionality omission <span class="fragment">(e.g., JavaScript).</span></li>
             </ul>
@@ -411,9 +409,15 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [3.19] - Width -->
           <section data-state="centered">
             <h2>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Width</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h2>
             <h4 class="fragment">
               The desired width of<br>
@@ -453,24 +457,26 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
             <h2><code>Width</code></h2>
             <h4>Takes care of this for you</h4>
           </section>
-          <!-- [3.27] - Device-Memory -->
+          <!-- [3.27] - Service Worker! -->
           <section data-state="centered">
-            <h3>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              <code>Device-Memory</code>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-            </h3>
-            <h5 class="fragment">Approximate system memory (in GiB)</h5>
+            <picture>
+              <source srcset="img/service-worker-1x.webp 1x, img/service-worker-2x.webp 2x" type="image/webp">
+              <img class="section-image medium" src="img/service-worker-1x.png" srcset="img/service-worker-1x.png 1x, img/service-worker-2x.png 2x" alt="A cartoon drawing of a gear representing service worker technology." width="640" height="585">
+            </picture>
+            <h3 class="uppercase">Service Worker</h3>
           </section>
-          <!-- [3.28] - Notes on Device-Memory -->
+          <!-- [3.28] - Service Worker Example -->
           <section>
-            <h4>Notes on <code>Device-Memory</code>:</h4>
-            <ul>
-              <li class="fragment">Technically part of the <a href="https://w3c.github.io/device-memory/" rel="noopener">Device Memory API</a>.</li>
-              <li class="fragment">Possible values are <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code></li>
-              <li class="fragment">Values are purposefully coarse to mitigate fingerprinting</li>
-              <li class="fragment">A JS equivalent can be found in <code>navigator.deviceMemory</code></li>
-            </ul>
+            <pre><code class="javascript">self.addEventListener(&quot;fetch&quot;, event => {
+  // Access hints via `event.request.headers.get`
+  let dpr = event.request.headers.get(&quot;DPR&quot;);
+  let viewportWidth = event.request.headers.get(&quot;Viewport-Width&quot;);
+  let width = event.request.headers.get(&quot;Width&quot;);
+
+  event.respondWith(async function() {
+    // ... Do what you will with these hints!
+  }());
+});</code></pre>
           </section>
         </section>
         <!-- [4.0] - Network Hints -->
@@ -482,8 +488,7 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
                 <h4 class="past">- Opting in</h4>
                 <h4 class="past">- Device Hints</h4>
                 <h4 class="current">- Network hints</h4>
-                <h4>- Pitfalls</h4>
-                <h4>- Wrapping up</h4>
+                <h4>- Parting Notes</h4>
               </div>
               <picture>
                 <source srcset="img/network-cable-1x.webp 1x, img/network-cable-2x.webp 2x" type="image/webp">
@@ -491,12 +496,26 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
               </picture>
             </div>
           </section>
-          <!-- [4.5] - The RTT Header -->
+          <!-- [4.2] - The Network -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/cell-tower-1x.webp 1x, img/cell-tower-2x.webp 2x" type="image/webp">
+              <img src="img/cell-tower-1x.png" srcset="img/cell-tower-1x.png 1x, img/cell-tower-2x.png 2x" alt="A cartoon drawing of a transmission tower." width="232" height="601">
+            </picture>
+            <h4 class="uppercase">Networks are <span class="accent">fragile</span></h4>
+          </section>
+          <!-- [4.3] - The RTT Header -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>RTT</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h4 class="fragment">Return Trip Time (in ms).</h4>
           </section>
@@ -510,9 +529,15 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [4.5] - The Downlink Header -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Downlink</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h4 class="fragment">Downstream (in Mbps).</h4>
           </section>
@@ -526,9 +551,15 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [4.5] - The ECT Header -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>ECT</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h4 class="fragment">Effective Connection Type</h4>
           </section>
@@ -569,109 +600,136 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           <!-- [4.7] - Save-Data -->
           <section data-state="centered">
             <h2>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Save-Data</code>
-              <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h2>
             <h4 class="fragment">&quot;Help me use less data!&quot;</h4>
           </section>
-          <!-- [4.8] - These Hints Should be Used Together -->
+          <!-- [4.8] - Save-Data Header Example -->
+          <section data-state="centered">
+            <h2>
+              <code>Save-Data: on</code>
+            </h2>
+            <h4 class="fragment">Sent when Data Saver in Chrome for Android is turned on.</h4>
+          </section>
+          <!-- [4.9] - These Hints Should be Used Together -->
           <section data-state="centered">
             <h2 class="uppercase">These hints should be used <span class="accent">together!</span></h2>
           </section>
-          <!-- [4.9] - An Approach to Network Quality Scoring with Client Hints (Pt. I) -->
+          <!-- [4.10] - Network Quality Scoring Function Skeleton -->
           <section data-state="centered">
-            <pre><code class="html">&lt;?php
+            <pre><code class="php">&lt;?php
 function network_quality() {
-  $quality = 1;
+  $quality = 1.0;
 
+  // If the Save-Data hint is present, assume
+  // the user wants the lightest experience possible.
   if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) &&
       $_SERVER[&quot;HTTP_SAVE_DATA&quot;] === &quot;on&quot;) {
-    $quality = 0;
+    $quality = 0.0;
     return $quality;
   }
 
-  // ...</code></pre>
-          </section>
-          <!-- [4.10] - An Approach to Network Quality Scoring with Client Hints (Pt. II) -->
-          <section data-state="centered">
-            <pre><code class="php">  // ...
-
-  if (isset($_SERVER[&quot;HTTP_RTT&quot;])) {
-    $rtt = (int)$_SERVER[&quot;HTTP_RTT&quot;];
-  }
-
-  if (isset($_SERVER[&quot;HTTP_DOWNLINK&quot;])) {
-    $downlink = (float)$_SERVER[&quot;HTTP_DOWNLINK&quot;];
-  }
-
-  if (isset($_SERVER[&quot;HTTP_ECT&quot;])) {
-    $ect = $_SERVER[&quot;HTTP_ECT&quot;];
-  }
-
-  // ...</code></pre>
-          </section>
-          <!-- [4.11] - An Approach to Network Quality Scoring with Client Hints (Pt. III) -->
-          <section data-state="centered">
-            <pre><code class="php">  // ...
-
-  if (isset($rtt) && isset($downlink) && isset($ect)) {
-    switch ($ect) {
-      case &quot;3g&quot;:
-        $quality -= 0.2;
-
-        if (isset($rtt) && $rtt &gt; 835) {
-          $quality -= 0.1;
-        }
-
-        if (isset($downlink) && $downlink &lt; 0.385) {
-          $quality -= .05;
-        }
-        break;
-
-    // ...</code></pre>
-          </section>
-          <!-- [4.12] - An Approach to Network Quality Scoring with Client Hints (Pt. IV) -->
-          <section data-state="centered">
-            <pre><code class="php">    // ...
-
-    case &quot;2g&quot;:
-      $quality -= 0.4;
-
-      if (isset($rtt) && $rtt &gt; 1700) {
-        $quality -= 0.1;
-      }
-
-      if (isset($downlink) && $downlink &lt; 0.06) {
-        $quality -= .05;
-      }
-      break;
-
-    // ...</code></pre>
-          </section>
-          <!-- [4.13] - An Approach to Network Quality Scoring with Client Hints (Pt. V) -->
-          <section data-state="centered">
-            <pre><code class="php">    // ...
-
-    case &quot;slow-2g&quot;:
-      $quality -= 0.6;
-
-      if (isset($rtt) && $rtt &gt; 2400) {
-        $quality -= 0.1;
-      }
-
-      if (isset($downlink) && $downlink &lt; 0.033) {
-        $quality -= .05;
-      }
-      break;
-    }
-  }
+  // ... A bunch of other stuff ...
 
   return $quality;
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [4.14] - What Can We Do With This? -->
+          <!-- [4.11] - Network Quality Scoring Table (ECT) -->
+          <section data-state="centered">
+            <table>
+              <thead>
+                <tr>
+                  <th><code>ECT</code></th>
+                  <th>Quality Degradation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>4g</code></td>
+                  <td><code>0.0</code></td>
+                </tr>
+                <tr>
+                  <td><code>3g</code></td>
+                  <td><code>0.2</code></td>
+                </tr>
+                <tr>
+                  <td><code>2g</code></td>
+                  <td><code>0.4</code></td>
+                </tr>
+                <tr>
+                  <td><code>slow-2g</code></td>
+                  <td><code>0.6</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [4.12] - Network Quality Scoring Table (RTT) -->
+          <section data-state="centered">
+            <table>
+              <thead>
+                <tr>
+                  <th><code>RTT</code></th>
+                  <th>Quality Degradation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&gt; 835</code></td>
+                  <td><code>0.1</code></td>
+                </tr>
+                <tr>
+                  <td><code>&gt; 1700</code></td>
+                  <td><code>0.1</code></td>
+                </tr>
+                <tr>
+                  <td><code>&gt; 2400</code></td>
+                  <td><code>0.1</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [4.13] - Network Quality Scoring Table (Downlink) -->
+          <section data-state="centered">
+            <table>
+              <thead>
+                <tr>
+                  <th><code>Downlink</code></th>
+                  <th>Quality Degradation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt; 0.385</code></td>
+                  <td><code>0.05</code></td>
+                </tr>
+                <tr>
+                  <td><code>&lt; 0.06</code></td>
+                  <td><code>0.05</code></td>
+                </tr>
+                <tr>
+                  <td><code>&lt; 0.033</code></td>
+                  <td><code>0.05</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [4.14] - Example Output -->
+          <section>
+            <pre><code class="php">&lt;?php
+// Assesses network quality
+network_quality(); // 0.55
+?&gt;</code></pre>
+          </section>
+          <!-- [4.15] - What Can We Do With This? -->
           <section>
             <h2 class="uppercase accent">Yeah, but<span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></h2>
             <h3 class="fragment">What can we do with this?</h3>
@@ -682,13 +740,13 @@ function network_quality() {
               <li class="fragment">Omit unnecessary JavaScript.</li>
             </ul>
           </section>
-          <!-- [4.15] - Example -->
+          <!-- [4.16] - Example -->
           <section>
             <pre><code class="html">&lt;head&gt;
   &lt;title&gt;Sconnie Timber&lt;/title&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;?php
-  // Only show fonts if network quality score is high enough
+  // Only show fonts if the network is fast enough
   if (network_quality() &gt; 0.5) {
     ?&gt;
     &lt;link rel=&quot;stylesheet&quot;
@@ -700,7 +758,7 @@ function network_quality() {
   &lt;link rel="stylesheet" href="css/main.css" type="text/css"&gt;
 &lt;/head&gt;</code></pre>
           </section>
-          <!-- [4.16] - JavaScript Equivalents -->
+          <!-- [4.17] - JavaScript Equivalents -->
           <section data-state="centered">
             <h2 class="uppercase">JS equivalents</h2>
             <h5>(in <code>navigator.connection</code>)</h5>
@@ -708,7 +766,7 @@ function network_quality() {
               <thead>
                 <tr>
                   <th>Property</th>
-                  <th>Associated Hint</th>
+                  <th>Associated Header</th>
                 </tr>
               </thead>
               <tbody>
@@ -730,14 +788,15 @@ function network_quality() {
                 </tr>
               </tbody>
             </table>
+            <h5>Part of the <a href="https://wicg.github.io/netinfo/" rel="noopener">Network Information API</a></h5>
           </section>
-          <!-- [4.17] - Service Workers! -->
+          <!-- [4.17] - Service Worker! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/service-worker-1x.webp 1x, img/service-worker-2x.webp 2x" type="image/webp">
               <img class="section-image medium" src="img/service-worker-1x.png" srcset="img/service-worker-1x.png 1x, img/service-worker-2x.png 2x" alt="A cartoon drawing of a gear representing service worker technology." width="640" height="585">
             </picture>
-            <h3 class="uppercase">Service Workers</h3>
+            <h3 class="uppercase">Service Worker</h3>
           </section>
           <!-- [4.18] - Service Worker Example -->
           <section>
@@ -749,7 +808,7 @@ function network_quality() {
     saveData = navigator.connection.saveData;
   }
 
-  event.respondWith(() => {
+  event.respondWith(async function() {
     if (/\.woff2?$/i.test(event.request.url) === true &&
         saveData === true) {
       // Aw hell naw
@@ -760,7 +819,7 @@ function network_quality() {
 
     // Okily dokily
     return fetch(event.request);
-  });
+  }());
 });</code></pre>
           </section>
           <!-- [4.20] - When Sites Don't Adapt -->
@@ -777,42 +836,53 @@ function network_quality() {
               <source srcset="img/sconnie-hints-1x.webp 1x, img/sconnie-hints-2x.webp 2x" type="image/webp">
               <img class="smallest bordered" src="img/sconnie-hints-1x.png" srcset="img/sconnie-hints-1x.png 1x, img/sconnie-hints-2x.png 2x" alt="The Sconnie Timber site when no client hints are used to modify the response." width="328" height="667">
             </picture>
-            <h4>When sites do adapt.</h4>
+            <h4>When sites <u>do</u> adapt.</h4>
           </section>
         </section>
-        <!-- [5.0] - Pitfalls -->
+        <!-- [5.0] - Parting Notes -->
         <section>
-          <!-- [5.1] - Pitfalls -->
+          <!-- [5.1] - Parting Notes -->
           <section data-state="section-starter">
             <div class="flex-container">
               <div class="sections">
                 <h4 class="past">- Opting in</h4>
                 <h4 class="past">- Device Hints</h4>
                 <h4 class="past">- Network hints</h4>
-                <h4 class="current">- Pitfalls</h4>
-                <h4>- Wrapping up</h4>
+                <h4 class="current">- Parting Notes</h4>
               </div>
               <picture>
-                <source srcset="img/opt-in-out-1x.webp 1x, img/opt-in-out-2x.webp 2x" type="image/webp">
-                <img class="section-image" src="img/opt-in-out-1x.png" srcset="img/opt-in-out-1x.png 1x, img/opt-in-out-2x.png 2x" alt="A cartoon drawing of two checkboxes with a pencil near them. One says 'opt out', while the other says 'opt in'. The 'opt in' box is checked." width="640" height="398">
+                <source srcset="img/gift-box-1x.webp 1x, img/gift-box-2x.webp 2x" type="image/webp">
+                <img class="section-image large" src="img/gift-box-1x.png" srcset="img/gift-box-1x.png 1x, img/gift-box-2x.png 2x" alt="A cartoon drawing of a gift box with a bow wrapped around it. GET IT? WRAPPING UP?" width="640" height="640">
               </picture>
             </div>
           </section>
           <!-- [5.2] - The Vary Header -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Vary</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h3>It's <code>Vary</code> important!</h3>
           </section>
           <!-- [5.3] - Vary Keys Cache Entries -->
           <section data-state="centered">
             <h1>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
               <code>Vary</code>
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
             </h1>
             <h3>Keys cache entries!</h3>
           </section>
@@ -846,7 +916,15 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
             </picture>
             <h2 class="uppercase">Fingerprinting</h2>
           </section>
-          <!-- [5.8] - Reminder: Client Hints Work in Chrome Only! -->
+          <!-- [5.8] - Client Hints Require HTTPS! -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/padlock-1x.webp 1x, img/padlock-2x.webp 2x" type="image/webp">
+              <img class="medium" src="img/padlock-1x.png" srcset="img/padlock-1x.png 1x, img/padlock-2x.png 2x" alt="A cartoon drawing of a padlock." width="268" height="480">
+            </picture>
+            <h3>Client hints <span class="accent">require HTTPS!</span></h3>
+          </section>
+          <!-- [5.9] - Reminder: Client Hints Work in Chrome Only! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/chrome-icon-1x.webp 1x, img/chrome-icon-2x.webp 2x" type="image/webp">
@@ -858,25 +936,57 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
             </h4>
             <h5 class="accent fragment" data-fragment-index="1">*And derived browsers</h5>
           </section>
-          <!-- [5.9] - -->
-        </section>
-        <!-- [6.0] - Pitfalls -->
-        <section>
-          <!-- [6.1] - Pitfalls -->
-          <section data-state="section-starter">
-            <div class="flex-container">
-              <div class="sections">
-                <h4 class="past">- Opting in</h4>
-                <h4 class="past">- Device Hints</h4>
-                <h4 class="past">- Network hints</h4>
-                <h4 class="past">- Pitfalls</h4>
-                <h4 class="current">- Wrapping up</h4>
+          <!-- [6.0] - With Thanks To... -->
+          <section data-state="section-slide centered">
+            <h2 class="uppercase">With thanks to:</h2>
+            <div class="people">
+              <div class="person">
+                <picture>
+                  <source srcset="img/eric-portis-1x.webp 1x, img/eric-portis-2x.webp 2x" type="image/webp">
+                  <img src="img/eric-portis-1x.png" srcset="img/eric-portis-1x.png 1x, img/eric-portis-2x.png 2x" alt="A photo of Eric Portis." width="150" height="150">
+                </picture>
+                <p>
+                  Eric Portis<br>
+                  <a href="https://twitter.com/etportis" rel="noopener">@etportis</a>
+                </p>
               </div>
-              <picture>
-                <source srcset="img/gift-box-1x.webp 1x, img/gift-box-2x.webp 2x" type="image/webp">
-                <img class="section-image large" src="img/gift-box-1x.png" srcset="img/gift-box-1x.png 1x, img/gift-box-2x.png 2x" alt="A cartoon drawing of a gift box with a bow wrapped around it. GET IT? WRAPPING UP?" width="640" height="640">
-              </picture>
+              <div class="person">
+                <picture>
+                  <source srcset="img/colin-bendell-1x.webp 1x, img/colin-bendell-2x.webp 2x" type="image/webp">
+                  <img src="img/colin-bendell-1x.png" srcset="img/colin-bendell-1x.png 1x, img/colin-bendell-2x.png 2x" alt="A photo of Colin Bendell." width="150" height="150">
+                </picture>
+                <p>
+                  Colin Bendell<br>
+                  <a href="https://twitter.com/colinbendell" rel="noopener">@colinbendell</a>
+                </p>
+              </div>
+              <div class="person">
+                <picture>
+                  <source srcset="img/ilya-grigorik-1x.webp 1x, img/ilya-grigorik-2x.webp 2x" type="image/webp">
+                  <img src="img/ilya-grigorik-1x.png" srcset="img/ilya-grigorik-1x.png 1x, img/ilya-grigorik-2x.png 2x" alt="A photo of Ilya Grigorik." width="150" height="150">
+                </picture>
+                <p>
+                  Ilya Grigorik<br>
+                  <a href="https://twitter.com/igrigorik" rel="noopener">@igrigorik</a>
+                </p>
+              </div>
             </div>
+          </section>
+          <!-- [5.10] - And Thank You! -->
+          <section data-state="centered">
+            <h2 class="uppercase">...and thank you!</h2>
+          </section>
+          <!-- [5.11] - End -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+            </picture>
+            <h2 class="uppercase">The end</h2>
+            <picture>
+              <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+            </picture>
           </section>
         </section>
       </div>
