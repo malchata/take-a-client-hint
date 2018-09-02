@@ -1,6 +1,4 @@
 # Take a (client) Hint!
-A talk about client hints and how they can help you adapt to your users!
-
 This is a talk about [client hints](https://tools.ietf.org/html/draft-grigorik-http-client-hints), a browser technology that clues servers in on aspects of the user's device and network conditions.
 
 ## Download and view slides

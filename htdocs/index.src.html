@@ -17,12 +17,12 @@
           <!-- [0.1] - Title Card -->
           <section data-state="centered">
             <h1 class="uppercase">Take a</h1>
-            <h2>(client)</h2>
+            <h3>(client)</h3>
             <h1 class="uppercase">Hint</h1>
-            <h6>
-              A talk by Jeremy Wagner<br>
+            <h4>A talk by Jeremy Wagner</h4>
+            <h5>
               <img class="social-icon" src="img/twitter.svg" alt="Twitter icon.">&nbsp;<a href="https://twitter.com/malchata" rel="noopener">malchata</a> :: <img class="social-icon" src="img/github.svg" alt="Github icon.">&nbsp;<a href="https://github.com/malchata" rel="noopener">malchata</a> :: <img class="social-icon" src="img/link.svg" alt="Link icon.">&nbsp;<a href="https://jeremy.codes" rel="noopener">jeremy.codes</a>
-            </h6>
+            </h5>
           </section>
           <!-- [0.2] - Hello! -->
           <section data-state="centered">
@@ -445,7 +445,9 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
           </section>
           <!-- [3.22] - Width Example -->
           <section data-state="centered">
-            <h2><code>Width: 1200</code></h2>
+            <h3>
+              <code>Width: 1200</code>
+            </h3>
           </section>
           <!-- [3.23] - Intrinsic Size -->
           <section data-state="centered">
@@ -494,7 +496,7 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
   let width = event.request.headers.get(&quot;Width&quot;);
 
   event.respondWith(async function() {
-    // ... Do what you will with these hints!
+    // Do what you will with these hints!
   }());
 });</code></pre>
           </section>
@@ -529,100 +531,7 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
               </picture>
             </div>
           </section>
-          <!-- [4.3] - The RTT Header -->
-          <section data-state="centered">
-            <h1>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-              <code>RTT</code>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-            </h1>
-            <h4 class="fragment"><u>R</u>ound <u>T</u>rip <u>T</u>ime (in ms).</h4>
-          </section>
-          <!-- [4.4] - RTT Example -->
-          <section data-state="centered">
-            <h4>
-              <code>RTT: 150</code>
-            </h4>
-            <h5 class="fragment">Nearest multiple of 25 ms</h5>
-          </section>
-          <!-- [4.5] - The Downlink Header -->
-          <section data-state="centered">
-            <h1>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-              <code>Downlink</code>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-            </h1>
-            <h4 class="fragment">Downstream (in Mbps).</h4>
-          </section>
-          <!-- [4.4] - RTT Example -->
-          <section data-state="centered">
-            <h4>
-              <code>Downlink: 1.75</code>
-            </h4>
-            <h5 class="fragment">Nearest multiple of 25 Kbps</h5>
-          </section>
-          <!-- [4.5] - The ECT Header -->
-          <section data-state="centered">
-            <h1>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-              <code>ECT</code>
-              <picture>
-                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-              </picture>
-            </h1>
-            <h4 class="fragment"><u>E</u>ffective <u>C</u>onnection <u>T</u>ype</h4>
-          </section>
-          <!-- [4.6] - ECT Equivalents -->
-          <section data-state="centered">
-            <table>
-              <thead>
-                <tr>
-                  <th><code>ECT</code> String</th>
-                  <th>Min. RTT (ms)</th>
-                  <th>Max Downlink (Kbps)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>slow-2g</code></td>
-                  <td class="right"><code>2,000</code></td>
-                  <td class="right"><code>50</code></td>
-                </tr>
-                <tr>
-                  <td><code>2g</code></td>
-                  <td class="right"><code>1,400</code></td>
-                  <td class="right"><code>70</code></td>
-                </tr>
-                <tr>
-                  <td><code>3g</code></td>
-                  <td class="right"><code>270</code></td>
-                  <td class="right"><code>700</code></td>
-                </tr>
-                <tr>
-                  <td><code>4g</code></td>
-                  <td class="right"><code>0</code></td>
-                  <td class="right"><code>&infin;</code></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- [4.7] - Save-Data -->
+          <!-- [4.3] - Save-Data -->
           <section data-state="centered">
             <h2>
               <picture>
@@ -637,18 +546,120 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
             </h2>
             <h4 class="fragment">&quot;Help me use less data!&quot;</h4>
           </section>
-          <!-- [4.8] - Save-Data Header Example -->
+          <!-- [4.4] - Save-Data Header Example -->
           <section data-state="centered">
             <h2>
               <code>Save-Data: on</code>
             </h2>
             <h4 class="fragment">Sent when Data Saver in Chrome for Android is turned on.</h4>
           </section>
-          <!-- [4.9] - These Hints Should be Used Together -->
+          <!-- [4.5] - The RTT Header -->
+          <section data-state="centered">
+            <h1>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+              <code>RTT</code>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+            </h1>
+            <h4 class="fragment"><u>R</u>ound <u>T</u>rip <u>T</u>ime</h4>
+            <h5 class="fragment">(in ms)</h5>
+          </section>
+          <!-- [4.6] - RTT Example -->
+          <section data-state="centered">
+            <h3>
+              <code>RTT: 150</code>
+            </h3>
+            <h5 class="fragment">Nearest multiple of 25 ms</h5>
+          </section>
+          <!-- [4.7] - The Downlink Header -->
+          <section data-state="centered">
+            <h1>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+              <code>Downlink</code>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+            </h1>
+            <h4 class="fragment">Downstream speed</h4>
+            <h5 class="fragment">(in Mbps)</h5>
+          </section>
+          <!-- [4.8] - Downlink Example -->
+          <section data-state="centered">
+            <h3>
+              <code>Downlink: 1.75</code>
+            </h3>
+            <h5 class="fragment">Nearest multiple of 25 Kbps</h5>
+          </section>
+          <!-- [4.9] - The ECT Header -->
+          <section data-state="centered">
+            <h1>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+              <code>ECT</code>
+              <picture>
+                <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
+                <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
+              </picture>
+            </h1>
+            <h4 class="fragment"><u>E</u>ffective <u>C</u>onnection <u>T</u>ype</h4>
+          </section>
+          <!-- [4.10] - ECT Example -->
+          <section data-state="centered">
+            <h3>
+              <code>ECT: 3g</code>
+            </h3>
+            <h5 class="fragment">Enumerated value</h5>
+          </section>
+          <!-- [4.11] - ECT Table -->
+          <section data-state="centered">
+            <table>
+              <thead>
+                <tr>
+                  <th><code>ECT</code> value</th>
+                  <th><code>RTT</code> (ms)</th>
+                  <th><code>Downlink</code> (Kbps)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>slow-2g</code></td>
+                  <td class="right"><code>&gt;=&nbsp;2,000</code></td>
+                  <td class="right"><code>&lt;=&nbsp;50</code></td>
+                </tr>
+                <tr>
+                  <td><code>2g</code></td>
+                  <td class="right"><code>&gt;=&nbsp;1,400</code></td>
+                  <td class="right"><code>&lt;=&nbsp;70</code></td>
+                </tr>
+                <tr>
+                  <td><code>3g</code></td>
+                  <td class="right"><code>&gt;=&nbsp;270</code></td>
+                  <td class="right"><code>&lt;=&nbsp;700</code></td>
+                </tr>
+                <tr>
+                  <td><code>4g</code></td>
+                  <td class="right"><code>&gt;=&nbsp;0</code></td>
+                  <td class="right"><code>&infin;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [4.11] - These Hints Should be Used Together -->
           <section data-state="centered">
             <h2 class="uppercase">These hints should be used <span class="accent">together!</span></h2>
           </section>
-          <!-- [4.10] - Network Quality Scoring Function Skeleton -->
+          <!-- [4.12] - Network Quality Scoring Function Skeleton -->
           <section data-state="centered">
             <pre><code class="php">&lt;?php
 function network_quality() {
@@ -662,13 +673,13 @@ function network_quality() {
     return $quality;
   }
 
-  // ... A bunch of other stuff ...
+  // Additional network quality logic omitted...
 
   return $quality;
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [4.11] - Network Quality Scoring Table (ECT) -->
+          <!-- [4.13] - Network Quality Scoring Table (ECT) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -697,7 +708,7 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.12] - Network Quality Scoring Table (RTT) -->
+          <!-- [4.14] - Network Quality Scoring Table (RTT) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -722,7 +733,7 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.13] - Network Quality Scoring Table (Downlink) -->
+          <!-- [4.15] - Network Quality Scoring Table (Downlink) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -747,14 +758,14 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.14] - Example Output -->
+          <!-- [4.16] - Example Output -->
           <section>
             <pre><code class="php">&lt;?php
 // Assesses network quality
-network_quality(); // 0.55
+network_quality(); // 0.35
 ?&gt;</code></pre>
           </section>
-          <!-- [4.15] - What Can We Do With This? -->
+          <!-- [4.17] - What Can We Do With This? -->
           <section>
             <h2 class="uppercase accent">Yeah, but<span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></h2>
             <h3 class="fragment">What can we do with this?</h3>
@@ -765,7 +776,7 @@ network_quality(); // 0.55
               <li class="fragment">Omit unnecessary JavaScript.</li>
             </ul>
           </section>
-          <!-- [4.16] - Example -->
+          <!-- [4.18] - Example -->
           <section>
             <pre><code class="html">&lt;head&gt;
   &lt;title&gt;Sconnie Timber&lt;/title&gt;
@@ -783,7 +794,7 @@ network_quality(); // 0.55
   &lt;link rel="stylesheet" href="css/main.css" type="text/css"&gt;
 &lt;/head&gt;</code></pre>
           </section>
-          <!-- [4.17] - JavaScript Equivalents -->
+          <!-- [4.19] - JavaScript Equivalents -->
           <section data-state="centered">
             <h2 class="uppercase">JS equivalents</h2>
             <h5>(in <code>navigator.connection</code>)</h5>
@@ -815,7 +826,7 @@ network_quality(); // 0.55
             </table>
             <h5>Part of the <a href="https://wicg.github.io/netinfo/" rel="noopener">Network Information API</a></h5>
           </section>
-          <!-- [4.17] - Service Worker! -->
+          <!-- [4.20] - Service Worker! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/service-worker-1x.webp 1x, img/service-worker-2x.webp 2x" type="image/webp">
@@ -823,7 +834,7 @@ network_quality(); // 0.55
             </picture>
             <h3 class="uppercase">Service Worker</h3>
           </section>
-          <!-- [4.18] - Service Worker Example -->
+          <!-- [4.21] - Service Worker Example -->
           <section>
             <pre><code class="javascript">self.addEventListener(&quot;fetch&quot;, event => {
   // Let's see about that netinfo API first...
@@ -836,7 +847,7 @@ network_quality(); // 0.55
   }
 
   event.respondWith(async function() {
-    // Do what you will!
+    // Do what you will with these hints!
   }());
 });</code></pre>
           </section>
@@ -866,12 +877,7 @@ network_quality(); // 0.55
               </picture>
             </div>
           </section>
-          <!-- [4.22] - Just Look at These Numbers -->
-          <section data-state="centered">
-            <h3 class="uppercase">Just look at these</h3>
-            <h1 class="uppercase accent">numbers!</h1>
-          </section>
-          <!-- [4.23] - Just Lookin' at Those Numbers -->
+          <!-- [4.22] - Just Look at These Numbers! -->
           <section data-state="centered">
             <table>
               <thead>
@@ -897,7 +903,7 @@ network_quality(); // 0.55
                 </tr>
               </tbody>
             </table>
-            <h6 class="fragment accent">*Tests performed in a throttled environment</h6>
+            <h6 class="fragment accent">*Tests performed on a throttled 3G-like connection</h6>
           </section>
         </section>
         <!-- [5.0] - Parting Notes -->
@@ -1033,17 +1039,15 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
           <section data-state="centered">
             <h2 class="uppercase">...and thank you!</h2>
           </section>
-          <!-- [5.11] - End -->
+          <!-- [5.11] - End / Slide Deck Link -->
           <section data-state="centered">
-            <picture>
-              <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-            </picture>
-            <h2 class="uppercase">The end</h2>
-            <picture>
-              <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
-              <img src="img/sparkle-1x.png" width="123" height="122" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
-            </picture>
+            <div>
+              <h2 class="uppercase">Slides:</h2>
+              <h5><a href="https://jlwagner.net/talks/take-a-client-hint" rel="noopener">jlwagner.net/talks/take-a-client-hint</a></h5>
+              <br><br><br>
+              <h4 class="uppercase">Client hints example code:</h4>
+              <h5><a href="https://github.com/malchata/client-hints-example" rel="noopener">github.com/malchata/client-hints-example</a></h5>
+            </div>
           </section>
         </section>
       </div>
