@@ -55,6 +55,18 @@ $headingTextTransform: none;
     color: $vividAuburn;
   }
 
+  .clear {
+    display: block;
+
+    &.center {
+      margin: 0 auto 1.5em;
+    }
+  }
+
+  .tiny {
+    max-width: 25%;
+  }
+
   .smallest {
     max-width: 30%;
   }
@@ -252,6 +264,10 @@ $headingTextTransform: none;
 
     &.right {
       text-align: right;
+    }
+
+    &.center {
+      text-align: center;
     }
 
     &.void {
