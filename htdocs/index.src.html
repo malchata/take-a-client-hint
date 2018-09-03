@@ -37,6 +37,21 @@
               </picture>
             </div>
           </section>
+          <!-- [0.3] - I'm Movin' Fast! -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/kramer.webp" type="image/webp">
+              <img class="stretch large" src="img/kramer.gif" alt="An animated GIF of a caffienated Kosmo Kramer walking extremely fast." width="326" height="219">
+            </picture>
+          </section>
+          <!-- [0.4] - Danger Ahead! -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/oh-no-1x.webp 1x, img/oh-no-2x.webp 2x" type="image/webp">
+              <img class="clear center medium" src="img/oh-no-1x.png" srcset="img/oh-no-1x.png 1x, img/oh-no-2x.png 2x" alt='A cartoon drawing of a construction barricade with a sign on it that reads "Oh no!".' width="769" height="701">
+            </picture>
+            <h3 class="uppercase"><span class="accent">Danger</span> ahead!</h3>
+          </section>
         </section>
         <!-- [1.0] - Client Hints Intro -->
         <section>
@@ -45,11 +60,11 @@
             <h3 class="uppercase">What are</h3>
             <h1 class="accent uppercase">client hints?</h1>
           </section>
-          <!-- [1.2] - The Clueless Browser -->
+          <!-- [1.2] - The Sad Browser -->
           <section data-state="centered">
             <picture>
-              <source srcset="img/clueless-browser-1x.webp 1x, img/clueless-browser-2x.webp 2x" type="image/webp">
-              <img class="medium" src="img/clueless-browser-1x.png" srcset="img/clueless-browser-1x.png 1x, img/clueless-browser-2x.png 2x" alt="A cartoon drawing of a browser with a question mark hovering over it.">
+              <source srcset="img/sad-browser-1x.webp 1x, img/sad-browser-2x.webp 2x" type="image/webp">
+              <img class="medium" src="img/sad-browser-1x.png" srcset="img/sad-browser-1x.png 1x, img/sad-browser-2x.png 2x" alt="A cartoon drawing of a browser with a sad face in the document body." width="668" height="443">
             </picture>
           </section>
           <!-- [1.3] - The Clueless Server -->
@@ -137,7 +152,7 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
           <!-- [1.14] - Wisconsin! -->
           <section data-state="centered">
-            <img src="img/wisconsin.svg" alt="An outline of the state of Wisconsin." class="stretch">
+            <img class="medium" src="img/wisconsin.svg" alt="An outline of the state of Wisconsin." class="stretch">
           </section>
           <!-- [1.15] - County Broadband Map -->
           <section data-state="centered">
@@ -379,7 +394,7 @@ if (isset($_SERVER[&quot;HTTP_DPR&quot;])) {
           <!-- [3.14] - Intrinsic Size -->
           <section data-state="centered">
             <h2 class="uppercase">Intrinsic size</h2>
-            <h4 class="fragment">The size of a resource in <span class="accent">physical pixels</span>.</h4>
+            <h4 class="fragment">is the size of a resource in <span class="accent">physical pixels</span>.</h4>
           </section>
           <!-- [3.15] - Density-corrected Intrinsic Size -->
           <section data-state="centered">
@@ -387,7 +402,7 @@ if (isset($_SERVER[&quot;HTTP_DPR&quot;])) {
               <span class="accent">Density-corrected</span><br>
               Intrinsic size
             </h2>
-            <h4 class="fragment">The intrinsic size, but divided by <code>DPR</code> to correct for pixel density.</h4>
+            <h4 class="fragment">is the intrinsic size, but divided by <code>DPR</code> to correct for pixel density.</h4>
           </section>
           <!-- [3.16] - Extrinsic Size -->
           <section data-state="centered">
@@ -395,10 +410,10 @@ if (isset($_SERVER[&quot;HTTP_DPR&quot;])) {
               Extrinsic size
             </h2>
             <h4 class="fragment">
-              The size of the image in the layout<br>
-              <span class="accent">as affected by CSS</span>
+              is the size of the image in the layout<br>
+              <span class="accent">as affected by CSS</span>.
             </h4>
-            <h5 class="fragment">(or <code>width</code> and <code>height</code> attributes)</h5>
+            <h5 class="fragment">(Or by <code>width</code> and <code>height</code> attributes.)</h5>
           </section>
           <!-- [3.17] - Width Requires `sizes` on Image Requests! -->
           <section data-state="centered">
@@ -668,11 +683,11 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
               </tbody>
             </table>
           </section>
-          <!-- [4.11] - These Hints Should be Used Together -->
+          <!-- [4.12] - These Hints Should be Used Together -->
           <section data-state="centered">
             <h2 class="uppercase">These hints should be used <span class="accent">together!</span></h2>
           </section>
-          <!-- [4.12] - Network Quality Scoring Function Skeleton -->
+          <!-- [4.13] - Network Quality Scoring Function Skeleton -->
           <section data-state="centered">
             <pre><code class="php">&lt;?php
 function network_quality() {
@@ -692,7 +707,7 @@ function network_quality() {
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [4.13] - Network Quality Scoring Table (ECT) -->
+          <!-- [4.14] - Network Quality Scoring Table (ECT) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -721,7 +736,7 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.14] - Network Quality Scoring Table (RTT) -->
+          <!-- [4.15] - Network Quality Scoring Table (RTT) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -746,7 +761,7 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.15] - Network Quality Scoring Table (Downlink) -->
+          <!-- [4.16] - Network Quality Scoring Table (Downlink) -->
           <section data-state="centered">
             <table>
               <thead>
@@ -771,7 +786,7 @@ function network_quality() {
               </tbody>
             </table>
           </section>
-          <!-- [4.16] - Example Output -->
+          <!-- [4.17] - Example Output -->
           <section>
             <pre><code class="php">&lt;?php
 // Could return 0.65 on a less than optimal
@@ -779,7 +794,7 @@ function network_quality() {
 network_quality();
 ?&gt;</code></pre>
           </section>
-          <!-- [4.17] - What Can We Do With This? -->
+          <!-- [4.18] - What Can We Do With This? -->
           <section>
             <h2 class="uppercase accent">Yeah, but<span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></h2>
             <h3 class="fragment">What can we do with this?</h3>
@@ -790,7 +805,7 @@ network_quality();
               <li class="fragment">Omit requests for optional resources on cross origins.</li>
             </ul>
           </section>
-          <!-- [4.18] - Example -->
+          <!-- [4.19] - Example -->
           <section>
             <pre><code class="html">&lt;head&gt;
   &lt;title&gt;Sconnie Timber&lt;/title&gt;
@@ -808,7 +823,7 @@ network_quality();
   &lt;link rel="stylesheet" href="css/main.css" type="text/css"&gt;
 &lt;/head&gt;</code></pre>
           </section>
-          <!-- [4.19] - JavaScript Equivalents -->
+          <!-- [4.20] - JavaScript Equivalents -->
           <section data-state="centered">
             <h2 class="uppercase">JS equivalents</h2>
             <h5>(in <code>navigator.connection</code>)</h5>
@@ -840,7 +855,7 @@ network_quality();
             </table>
             <h5>Part of the <a href="https://wicg.github.io/netinfo/" rel="noopener">Network Information API</a></h5>
           </section>
-          <!-- [4.20] - Service Worker! -->
+          <!-- [4.21] - Service Worker! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/service-worker-1x.webp 1x, img/service-worker-2x.webp 2x" type="image/webp">
@@ -848,7 +863,7 @@ network_quality();
             </picture>
             <h3 class="uppercase">Service Worker!</h3>
           </section>
-          <!-- [4.21] - Service Worker Example -->
+          <!-- [4.22] - Service Worker Example -->
           <section>
             <pre><code class="javascript">self.addEventListener(&quot;fetch&quot;, event => {
   // Let's see about that netinfo API first...
@@ -865,7 +880,7 @@ network_quality();
   }());
 });</code></pre>
           </section>
-          <!-- [4.20] - When Sites Don't Adapt -->
+          <!-- [4.23] - When Sites Don't Adapt -->
           <section data-state="centered">
             <div class="flex-container">
               <div>
@@ -878,7 +893,7 @@ network_quality();
               </picture>
             </div>
           </section>
-          <!-- [4.21] - When Sites Do Adapt -->
+          <!-- [4.24] - When Sites Do Adapt -->
           <section data-state="centered">
             <div class="flex-container">
               <div>
@@ -891,7 +906,7 @@ network_quality();
               </picture>
             </div>
           </section>
-          <!-- [4.22] - Just Look at These Numbers! -->
+          <!-- [4.25] - Just Look at These Numbers! -->
           <section data-state="centered">
             <table>
               <thead>
@@ -994,18 +1009,23 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [5.5] - Setting Vary -->
+          <!-- [5.5] - Careful What you Vary! -->
+          <section data-state="centered">
+            <h3 class="uppercase">Be careful what you</h3>
+            <h1><code>Vary</code></h1>
+          </section>
+          <!-- [5.6] - Setting Vary -->
           <section>
             <h3>Setting <code>Vary</code>:</h3>
             <pre><code class="apache">&lt;FilesMatch &quot;\.(html|php)$&quot;&gt;
   Header set Vary &quot;Accept-Encoding, Save-Data&quot;
 &lt;/FilesMatch&gt;                       ^^^^^^^^^</code></pre>
           </section>
-          <!-- [5.6] - Only Set Hints You'll Use! -->
+          <!-- [5.7] - Only Set Hints You'll Use! -->
           <section data-state="centered">
             <h2 class="uppercase">Only set hints you'll use!</h2>
           </section>
-          <!-- [5.7] - Client Hints Require HTTPS! -->
+          <!-- [5.8] - Client Hints Require HTTPS! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/padlock-1x.webp 1x, img/padlock-2x.webp 2x" type="image/webp">
@@ -1014,7 +1034,7 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
             <h4 class="uppercase">Client hints</h4>
             <h3 class="uppercase accent">require HTTPS!</h3>
           </section>
-          <!-- [5.8] - Reminder: Client Hints Work in Chrome Only! -->
+          <!-- [5.9] - Reminder: Client Hints Work in Chrome Only! -->
           <section data-state="centered">
             <picture>
               <source srcset="img/chrome-icon-1x.webp 1x, img/chrome-icon-2x.webp 2x" type="image/webp">
@@ -1031,7 +1051,7 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
             <h2 class="uppercase">Time to</h2>
             <h1 class="uppercase accent">wrap up</h1>
           </section>
-          <!-- [5.10] - With Thanks To... -->
+          <!-- [5.11] - With Thanks To... -->
           <section data-state="section-slide centered">
             <h2 class="uppercase">With thanks to:</h2>
             <div class="people">
@@ -1067,11 +1087,11 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
               </div>
             </div>
           </section>
-          <!-- [5.10] - And Thank You! -->
+          <!-- [5.12] - And Thank You! -->
           <section data-state="centered">
             <h2 class="uppercase">...and thank you!</h2>
           </section>
-          <!-- [5.11] - End / Slide Deck Link -->
+          <!-- [5.13] - End / Slide Deck Link -->
           <section data-state="centered">
             <div>
               <h2 class="uppercase">Slides:</h2>
