@@ -19,7 +19,7 @@ To kill the web server, press `Ctrl+C` at any time.
 
 This talk is scheduled for the following events:
 
-- [Full Stack Fest 2018](https://2018.fullstackfest.com) - September 3rd - 7th in Barcelona, Cataluña, España
+- ~~[Full Stack Fest 2018](https://2018.fullstackfest.com) - September 3rd - 7th in Barcelona, Cataluña, España~~
 - [Prairie Dev Con 2018](http://www.prairiedevcon.com/) - October 16th - 17th in Regina, Saskatchewan, Canada
 
 If you're interested in booking this talk for your event, get in touch via [Twitter](https://twitter.com/malchata) or [by email](https://www.jeremywagner.me/hire/#contacting-me).

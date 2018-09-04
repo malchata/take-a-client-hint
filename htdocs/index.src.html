@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex, nofollow, nocache">
     <title>Take a (client) Hint!</title>
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/takeahint.css?v=20180903">
+    <link rel="stylesheet" href="css/theme/takeahint.css?v=20180904">
     <link rel="stylesheet" href="lib/css/zenburn.css">
   </head>
   <body>
@@ -44,14 +44,6 @@
               <img class="stretch large" src="img/kramer.gif" alt="An animated GIF of a caffienated Kosmo Kramer walking extremely fast." width="326" height="219">
             </picture>
           </section>
-          <!-- [0.4] - Danger Ahead! -->
-          <section data-state="centered">
-            <picture>
-              <source srcset="img/oh-no-1x.webp 1x, img/oh-no-2x.webp 2x" type="image/webp">
-              <img class="clear center medium" src="img/oh-no-1x.png" srcset="img/oh-no-1x.png 1x, img/oh-no-2x.png 2x" alt='A cartoon drawing of a construction barricade with a sign on it that reads "Oh no!".' width="769" height="701">
-            </picture>
-            <h3 class="uppercase"><span class="accent">Danger</span> ahead!</h3>
-          </section>
         </section>
         <!-- [1.0] - Client Hints Intro -->
         <section>
@@ -71,24 +63,17 @@
           <section data-state="centered">
             <picture>
               <source srcset="img/clueless-server-1x.webp 1x, img/clueless-server-2x.webp 2x" type="image/webp">
-              <img src="img/clueless-server-1x.png" srcset="img/clueless-server-1x.png 1x, img/clueless-server-2x.png 2x" alt="A cartoon drawing of a web server with a question mark hovering over it.">
+              <img src="img/clueless-server-1x.png" srcset="img/clueless-server-1x.png 1x, img/clueless-server-2x.png 2x" alt="A cartoon drawing of a web server with a question mark hovering over it." width="313" height="578">
             </picture>
           </section>
-          <!-- [1.4] - The Sad Device -->
-          <section data-state="centered">
-            <picture>
-              <source srcset="img/sad-device-1x.webp 1x, img/sad-device-2x.webp 2x" type="image/webp">
-              <img src="img/sad-device-1x.png" srcset="img/sad-device-1x.png 1x, img/sad-device-2x.png 2x" alt="A cartoon drawing of a mobile device with a sad face on the screen.">
-            </picture>
-          </section>
-          <!-- [1.5] - Content Negotiation -->
+          <!-- [1.4] - Content Negotiation -->
           <section data-state="centered">
             <h1 class="uppercase accent">
               Content<br>
               negotiation
             </h1>
           </section>
-          <!-- [1.6] - The HTTP Accept Header -->
+          <!-- [1.5] - The HTTP Accept Header -->
           <section data-state="centered">
             <h2>The HTTP</h2>
             <h1>
@@ -104,7 +89,7 @@
             </h1>
             <h2>header</h2>
           </section>
-          <!-- [1.7] - Accept Header Example -->
+          <!-- [1.6] - Accept Header Example -->
           <section data-state="centered">
             <h4>
               <code>Accept: image/webp,image/*</code>
@@ -112,7 +97,7 @@
             <h4 class="fragment">Value contextual to requested resource.</h4>
             <h6 class="fragment">Actual header content truncated for brevity.</h6>
           </section>
-          <!-- [1.8] - A Typical `<picture>` Example -->
+          <!-- [1.7] - A Typical `<picture>` Example -->
           <section>
             <pre><code class="html">&lt;!-- Load a WebP if we can (but fall back if we can't). --&gt;
 &lt;picture&gt;
@@ -121,52 +106,52 @@
 &lt;/picture&gt;
 </code></pre>
           </section>
-          <!-- [1.9] - Rewriting the Request -->
+          <!-- [1.8] - Rewriting the Request -->
           <section>
             <pre><code class="apache">RewriteEngine On
 RewriteCond %{HTTP:Accept} image/webp [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1.webp -f [NC]
 RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           </section>
-          <!-- [1.10] - Rewriting image markup -->
+          <!-- [1.9] - Rewriting image markup -->
           <section>
             <pre><code class="html">&lt;!-- If WebP is supported, this JPEG request is
      automatically rewritten to a WebP! --&gt;
 &lt;img src=&quot;whats-up.jpg&quot; alt=&quot;I'm an image!&quot;&gt;</code></pre>
           </section>
-          <!-- [1.11] - MIT Article -->
+          <!-- [1.10] - MIT Article -->
           <section data-background="img/digital-divide.png" data-background-position="center left"></section>
-          <!-- [1.12] - MIT Article Quote -->
+          <!-- [1.11] - MIT Article Quote -->
           <section data-background="img/digital-divide.png" data-background-color="#000000" data-background-position="center left" data-background-opacity=".25">
             <picture>
               <source srcset="img/article-quote-2x.webp 2x, img/article-quote-1x.webp 1x" type="image/webp">
-              <img src="img/article-quote-1x.png" srcset="img/article-quote-2x.png 2x, img/article-quote-1x.png 1x" alt="A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online." class="shadow stretch">
+              <img src="img/article-quote-1x.png" width="619" height="369" srcset="img/article-quote-2x.png 2x, img/article-quote-1x.png 1x" alt="A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online." class="shadow stretch">
             </picture>
           </section>
-          <!-- [1.13] - Adaptive Performance -->
+          <!-- [1.12] - Adaptive Performance -->
           <section data-state="centered">
             <h1 class="uppercase">
               <span class="accent">Adaptive</span><br>
               performance
             </h1>
           </section>
-          <!-- [1.14] - Wisconsin! -->
+          <!-- [1.13] - Wisconsin! -->
           <section data-state="centered">
             <img class="medium" src="img/wisconsin.svg" alt="An outline of the state of Wisconsin." class="stretch">
           </section>
-          <!-- [1.15] - County Broadband Map -->
+          <!-- [1.14] - County Broadband Map -->
           <section data-state="centered">
             <picture>
               <source srcset="img/broadband-map-1x.webp 1x, img/broadband-map-2x.webp 2x" type="image/webp">
-              <img class="large shadow" src="img/broadband-map-1x.png" srcset="img/broadband-map-1x.png 1x, img/broadband-map-2x.png 2x" alt="A map showing broadband connectivity for Buffalo County, WI in the United States.">
+              <img class="large shadow" width="720" height="716" src="img/broadband-map-1x.png" srcset="img/broadband-map-1x.png 1x, img/broadband-map-2x.png 2x" alt="A map showing broadband connectivity for Buffalo County, WI in the United States.">
             </picture>
           </section>
-          <!-- [1.16] - Performance Bridges the Gap -->
+          <!-- [1.15] - Performance Bridges the Gap -->
           <section data-state="centered">
             <h1 class="accent uppercase">Performance</h1>
             <h2 class="uppercase">bridges the gap</h2>
           </section>
-          <!-- [1.17] - Client Hints Can Take us Further -->
+          <!-- [1.16] - Client Hints Can Take us Further -->
           <section data-state="centered">
             <h1 class="accent uppercase">Client hints</h1>
             <h2 class="uppercase">can take us further</h2>
@@ -222,31 +207,39 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
               <img class="shadow" src="img/caniuse-1x.png" srcset="img/caniuse-1x.png 1x, img/caniuse-2x.png 2x" alt="A screenshot of caniuse.com showing browser support information for client hints." width="1024" height="445">
             </picture>
           </section>
-          <!-- [2.6] - Opt in with `Accept-CH` -->
+          <!-- [2.6] - Opt in With `Accept-CH` -->
           <section data-state="centered">
             <h2 class="uppercase"><span class="accent">Opt in</span> with</h2>
             <h3><code>Accept-CH</code></h3>
           </section>
-          <!-- [2.7] - Ways to opt in -->
+          <!-- [2.7] - Ways to Opt In -->
           <section>
             <h4>Example header:</h4>
-            <pre><code class="http">Accept-CH: Width, Viewport-Width, DPR</code></pre>
+            <pre><code class="http">Accept-CH: Width, DPR</code></pre>
             <div class="fragment">
-              <h4>Code example:</h4>
-              <pre><code class="php">&lt;?php header(&quot;Accept-CH: Width, Viewport-Width, DPR&quot;); ?&gt;</code></pre>
+             <h4>Via HTML:</h4>
+             <pre><code class="html">&lt;meta http-equiv=&quot;Accept-CH&quot; content=&quot;Width, DPR&quot;&gt;</pre></code>
+           </div>
+            <div class="fragment">
+              <h4>Via PHP:</h4>
+              <pre><code class="php">&lt;?php header(&quot;Accept-CH: Width, DPR&quot;); ?&gt;</code></pre>
             </div>
           </section>
-          <!-- [2.8] - Ways to opt in -->
+          <!-- [2.8] - Persist Hints with `Accept-CH-Lifetime` -->
           <section data-state="centered">
             <h3 class="uppercase"><span class="accent">Persist hints</span> with</h3>
             <h3><code>Accept-CH-Lifetime</code></h3>
           </section>
-          <!-- [2.9] - Ways to opt in -->
+          <!-- [2.9] - Ways to Persist Hints -->
           <section>
             <h4>Example header:</h4>
             <pre><code class="http">Accept-CH-Lifetime: 86400</code></pre>
             <div class="fragment">
-              <h4>Code example:</h4>
+             <h4>Via HTML:</h4>
+             <pre><code class="html">&lt;meta http-equiv=&quot;Accept-CH-Lifetime&quot; content=&quot;86400&quot;&gt;</pre></code>
+           </div>
+            <div class="fragment">
+              <h4>Via PHP:</h4>
               <pre><code class="php">&lt;?php header(&quot;Accept-CH-Lifetime: 86400&quot;); ?&gt;</code></pre>
             </div>
           </section>
@@ -254,8 +247,16 @@ RewriteRule (.+)\.(png|jpe?g|gif)$ $1.webp [T=image/webp,L]</code></pre>
           <section data-state="centered">
             <picture>
               <source srcset="img/example-hints-1x.webp 1x, img/example-hints-2x.webp 2x" type="image/webp">
-              <img class="shadow stretch medium" src="img/example-hints-1x.png" srcset="img/example-hints-1x.png 1x, img/example-hints-2x.png 2x" alt="A screenshot of client hint request headers shown in Chrome's developer tools." width="382" height="449">
+              <img class="shadow stretch larger" src="img/example-hints-1x.png" srcset="img/example-hints-1x.png 1x, img/example-hints-2x.png 2x" alt="A screenshot of client hint request headers shown in Chrome's developer tools." width="506" height="407">
             </picture>
+          </section>
+          <!-- [2.11] - Here We Go! -->
+          <section data-state="centered">
+            <picture>
+              <source srcset="img/oh-no-1x.webp 1x, img/oh-no-2x.webp 2x" type="image/webp">
+              <img class="clear center medium" src="img/oh-no-1x.png" srcset="img/oh-no-1x.png 1x, img/oh-no-2x.png 2x" alt='A cartoon drawing of a construction barricade with a sign on it that reads "Oh no!".' width="769" height="701">
+            </picture>
+            <h3 class="uppercase accent">Here we go!</h3>
           </section>
         </section>
         <!-- [3.0] - Device Hints -->
@@ -566,13 +567,14 @@ if (isset($_SERVER[&quot;HTTP_VIEWPORT_WIDTH&quot;])) {
                 <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
                 <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
               </picture>
-              <code>Save-Data</code>
+              <code>Save-Data</code><span class="accent fragment" data-fragment-index="2">*</span>
               <picture>
                 <source srcset="img/sparkle-2x.webp 2x, img/sparkle-1x.webp 1x" type="image/webp">
                 <img src="img/sparkle-1x.png" width="96" height="95" srcset="img/sparkle-2x.png 2x, img/sparkle-1x.png 1x" class="sparkle" alt="A cartoon drawing of a sparkle emoji.">
               </picture>
             </h2>
-            <h4 class="fragment">&quot;Help me use less data!&quot;</h4>
+            <h4 class="fragment" data-fragment-index="1">&quot;Help me use less data!&quot;</h4>
+            <h6 class="fragment accent" data-fragment-index="2">*not an opt-in hint.</h6>
           </section>
           <!-- [4.4] - Save-Data Header Example -->
           <section data-state="centered">
@@ -1009,17 +1011,17 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
 }
 ?&gt;</code></pre>
           </section>
-          <!-- [5.5] - Careful What you Vary! -->
-          <section data-state="centered">
-            <h3 class="uppercase">Be careful what you</h3>
-            <h1><code>Vary</code></h1>
-          </section>
-          <!-- [5.6] - Setting Vary -->
+          <!-- [5.5] - Setting Vary -->
           <section>
             <h3>Setting <code>Vary</code>:</h3>
             <pre><code class="apache">&lt;FilesMatch &quot;\.(html|php)$&quot;&gt;
   Header set Vary &quot;Accept-Encoding, Save-Data&quot;
 &lt;/FilesMatch&gt;                       ^^^^^^^^^</code></pre>
+          </section>
+          <!-- [5.6] - Careful What you Vary! -->
+          <section data-state="centered">
+            <h3 class="uppercase">Be careful what you</h3>
+            <h1><code>Vary</code></h1>
           </section>
           <!-- [5.7] - Only Set Hints You'll Use! -->
           <section data-state="centered">
@@ -1097,7 +1099,10 @@ if (isset($_SERVER[&quot;HTTP_SAVE_DATA&quot;]) === false) {
               <h2 class="uppercase">Slides:</h2>
               <h5><a href="https://jlwagner.net/talks/take-a-client-hint" rel="noopener">jlwagner.net/talks/take-a-client-hint</a></h5>
               <br><br><br>
-              <h4 class="uppercase">example code:</h4>
+              <h4 class="uppercase">Client hints spec:</h4>
+              <h5><a href="https://tools.ietf.org/html/draft-grigorik-http-client-hints" rel="noopener">tools.ietf.org/html/draft-grigorik-http-client-hints</a></h5>
+              <br><br><br>
+              <h4 class="uppercase">Example code:</h4>
               <h5><a href="https://github.com/malchata/client-hints-example" rel="noopener">github.com/malchata/client-hints-example</a></h5>
             </div>
           </section>
